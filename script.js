@@ -117,12 +117,8 @@ function collisionDetection() {
                     dy = -dy;
                     brique.statusbar = 0;
                     score += 5;
-<<<<<<< HEAD
-                    if(score === brickRowCount*brickColumnCount*5) {
-=======
                     if(score == brickRowCount*brickColumnCount*5) {
                         WIN.play(); /*********** */
->>>>>>> b3bdde1fb7a4cee705f600549b7d155c9494b417
                         alert("C'est gagné, Bravo!");
                         document.location.reload();
                         clearInterval(interval);
@@ -252,7 +248,6 @@ haut et en bas mais aussi a droite et a gauche */
         alert("GAME OVER");
         document.location.reload();
         clearInterval(interval);  // obligatoire pour arreter le jeux sur chrome
-<<<<<<< HEAD
     }  
     }
 }
@@ -269,40 +264,7 @@ function draw() {
     drawLives()
     lostLife()
     gameOver()
-    
-
-
-
-
-   
-=======
-    } else if (y + dy > canvas.height-ballRadius){
-        lives--;
-        x = canvas.width/2;
-        y = canvas.height-30;
-        dx = 2;
-        dy = -2;
-        paddleX = (canvas.width-paddleWidth)/2;
-        LIFE_LOST.play(); 
-        alert("vous avez perdu une vie");
-    }
-}
-/*condition pour gerer l'arret de la palette */
-    if(rightPressed) {
-        paddleX += 5;
-        if (paddleX + paddleWidth > canvas.width){
-            paddleX = canvas.width - paddleWidth;
-        }
-    }
-    else if(leftPressed) {
-        paddleX -= 5;
-        if (paddleX < 0){
-            paddleX = 0;
-        }
-    }
->>>>>>> b3bdde1fb7a4cee705f600549b7d155c9494b417
-    
-    
+      
 }
 
 /*fonction qui appel la fonction draw créer plus haut avec un intervalle regulier (ici 10ms)
