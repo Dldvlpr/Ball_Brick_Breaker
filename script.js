@@ -4,6 +4,15 @@
 const canvas = document.getElementById("screenGame");
 const context = canvas.getContext("2d");
 
+/*Images à placer dans le canvas pour le score et les vies*/
+
+
+const LIFE_IMG = new Image();
+LIFE_IMG.src = "images/logo/life.png";
+
+/*const SCORE_IMG = new Image();
+SCORE_IMG.src = "img/logo/score.png";*/
+
 /*Environnement sonore*/
 
 
@@ -138,8 +147,14 @@ function drawScore() {
 
 function drawLives() {
     context.font = "20px Arial";
+<<<<<<< HEAD
     context.fillStyle ="black";
     context.fillText("Lives: "+lives,canvas.width-90, 20);
+=======
+    context.fillStyle = color;
+    context.fillText(lives,canvas.width-90, 20);
+    context.drawImage(LIFE_IMG, 350, 3, 32, 25);
+>>>>>>> 94d032552d1313efbeed38d2d5f5ddabe667ed4d
 }
 
 /*fonction de creation de la raquette */
@@ -148,6 +163,7 @@ function drawPaddle() {
     context.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
     context.fillStyle = color;
     context.fill();
+
     context.closePath();
 }
 
