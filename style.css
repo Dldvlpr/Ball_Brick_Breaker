@@ -43,15 +43,11 @@ ul {
   margin-right: 5%;
 }
 
-<<<<<<< HEAD
- /*  align-items:center; */
-=======
 ul > li {
   color: rgb(255, 0, 85);
   display: flex;
   align-items: center;
 }
->>>>>>> 94d032552d1313efbeed38d2d5f5ddabe667ed4d
 
 ul > li > a {
   text-decoration: none;
