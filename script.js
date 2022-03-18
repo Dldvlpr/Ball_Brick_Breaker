@@ -4,6 +4,7 @@
 const canvas = document.getElementById("screenGame");
 const context = canvas.getContext("2d");
 
+
 /*Images à placer dans le canvas pour le score et les vies et briques*/
 
 
@@ -45,9 +46,9 @@ let y = canvas.height -30;
 let dx = 2;
 let dy = -3;
 let start = false;
-const ballRadius = 15;
-const paddleHeight = 15;
-const paddleWidth = 110;
+const ballRadius = 10;
+const paddleHeight = 10;
+const paddleWidth = 80;
 let paddleX = (canvas.width-paddleWidth)/2;
 let rightPressed = false;
 let leftPressed = false;
@@ -56,31 +57,30 @@ let lives = 3
 
 /*ici on defini les variable pour créer les brique le nombre de ligne de colonne largeur etc...
  on fait aussi en sorte qu'elle ne soit pas dessiner sur le bord du canvas avec les 2 dernier variables */
-const brickRowCount = 10;
-const brickColumnCount = 17;
-const brickWidth = 40;
-const brickHeight = 30;
+const brickRowCount = 8;
+const brickColumnCount = 14;
+const brickWidth = 20;
+const brickHeight = 10;
 const brickPadding = 3;
 const brickOffsetTop = 80;
-const brickOffsetLeft = 35;
+const brickOffsetLeft = 30;
 const color = "#BB473B";
-
-
-
-
 
 /*evenement d'ecoute pour l'appui sur les fleche droite ou gauche pour gerer le deplacement de la palette */
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
-document.addEventListener("mousemove", mouseMoveHandler, false);
+
+
+/* document.addEventListener("mousemove", mouseMoveHandler, false); */
+
 /*fonction qui verifie lorsque les touche droite et gauche sont enfonçé et relaché 
 et qui modifie les variable touche présser qui sont initialisé a false et passe a true lorsqu'elle le sont
 * le parametre e represente l'evenement (appui)  */
 function keyDownHandler(events) {
-    if(events.keyCode === 13){
+    if(events.keyCode === 32){
         start = true;
     }
-    if(events.keyCode === 39) {
+    if(events.keyCode === 39 ) {
         rightPressed = true;
     }
     else if(events.keyCode === 37) {
@@ -100,8 +100,26 @@ function keyUpHandler(events) {
 
 
 
+
+/*fonction pour gerer le deplaçement et l'arret de la palette et la colision avec le mur*/
+function paddleMove(){
+    if(rightPressed) {
+        paddleX += 8;
+        if (paddleX + paddleWidth > canvas.width){
+            paddleX = canvas.width - paddleWidth;
+        }
+    }
+    else if(leftPressed) {
+        paddleX -= 8;
+        if (paddleX < 0){
+            paddleX = 0;
+        }
+    }
+}
+
+
 // fonction de detectin de la position de la souris pour deplacer la raquette avec la souris
-function mouseMoveHandler(events) {
+/* function mouseMoveHandler(events) {
     let relativeX = events.clientX - canvas.offsetLeft;
     if(relativeX > 0 && relativeX < canvas.width) {
         paddleX = relativeX - paddleWidth/2;
@@ -110,7 +128,7 @@ function mouseMoveHandler(events) {
     } if (paddleX < 0){
         paddleX = 0;
     } 
-}
+} */
 
 //creation du tableau et de sa boucle qui contiendra les les brique une fois créer
 const bricks = [];
@@ -165,21 +183,6 @@ function drawPaddle() {
     
 }
 
-/*fonction pour gerer le deplaçement et l'arret de la palette et la colision avec le mur*/
-function paddleMove(){
-    if(rightPressed) {
-        paddleX += 8;
-        if (paddleX + paddleWidth > canvas.width){
-            paddleX = canvas.width - paddleWidth;
-        }
-    }
-    else if(leftPressed) {
-        paddleX -= 8;
-        if (paddleX < 0){
-            paddleX = 0;
-        }
-    }
-}
 
 /*fonction pour créer et definir l'emplacement de creation des briques en fonction des variable defini 
 au debut du script on y inclu un tableau multidimensionel dans lequel on va stocker les briques
@@ -224,7 +227,7 @@ function drawBall() {
           x += dx;
           y += dy;
       } else {
-          x = paddleX + 50;
+          x = paddleX + 60;
           y = canvas.height - 30;
       }
 
@@ -233,11 +236,14 @@ function drawBall() {
   function lostLife(){
     if (y + dy > canvas.height-ballRadius){
         lives--;
-        LIFE_LOST.play();
         start = false
+        rightPressed = false;
+        leftPressed = false;
+        LIFE_LOST.play();
         startGame();
         paddleX = (canvas.width-paddleWidth)/2;
         alert("vous avez perdu une vie");
+        
         
         }
   }
@@ -279,15 +285,7 @@ function draw() {
     drawScore();
     drawLives()
     lostLife()
-    gameOver()
-    
-
-
-
-
-   
-    
-    
+    gameOver()  
 }
 
 /*fonction qui appel la fonction draw créer plus haut avec un intervalle regulier (ici 10ms)
