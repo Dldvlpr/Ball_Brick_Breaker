@@ -57,10 +57,17 @@ let lives = 3
 
 /*ici on defini les variable pour créer les brique le nombre de ligne de colonne largeur etc...
  on fait aussi en sorte qu'elle ne soit pas dessiner sur le bord du canvas avec les 2 dernier variables */
+<<<<<<< HEAD
 const brickRowCount = 8;
 const brickColumnCount = 14;
 const brickWidth = 20;
 const brickHeight = 10;
+=======
+const brickRowCount = 5;
+const brickColumnCount = 8;
+const brickWidth = 90;
+const brickHeight = 60;
+>>>>>>> 941ad0ee95565c83966103eaeb5639042675df8f
 const brickPadding = 3;
 const brickOffsetTop = 80;
 const brickOffsetLeft = 30;
@@ -69,10 +76,14 @@ const color = "#BB473B";
 /*evenement d'ecoute pour l'appui sur les fleche droite ou gauche pour gerer le deplacement de la palette */
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
+<<<<<<< HEAD
 
 
 /* document.addEventListener("mousemove", mouseMoveHandler, false); */
 
+=======
+//document.addEventListener("mousemove", mouseMoveHandler, false);
+>>>>>>> 941ad0ee95565c83966103eaeb5639042675df8f
 /*fonction qui verifie lorsque les touche droite et gauche sont enfonçé et relaché 
 et qui modifie les variable touche présser qui sont initialisé a false et passe a true lorsqu'elle le sont
 * le parametre e represente l'evenement (appui)  */
@@ -130,7 +141,7 @@ function paddleMove(){
     } 
 } */
 
-//creation du tableau et de sa boucle qui contiendra les les brique une fois créer
+//creation du tableau et de sa boucle qui contiendra les brique une fois créer
 const bricks = [];
 for(let column=0; column<brickColumnCount; column++) {
     bricks[column] = [];
@@ -171,7 +182,7 @@ function drawScore() {
 }
 
 function drawLives() {
-    context.font = "44px Arial";
+    context.font = "24px";
     context.fillStyle = "black";
     context.fillText(lives,canvas.width-65, 53);
     context.drawImage(LIFE_IMG, 680, 21, 45, 37);
@@ -285,11 +296,29 @@ function draw() {
     drawScore();
     drawLives()
     lostLife()
+<<<<<<< HEAD
     gameOver()  
+=======
+    gameOver()    
+>>>>>>> 941ad0ee95565c83966103eaeb5639042675df8f
 }
 
 /*fonction qui appel la fonction draw créer plus haut avec un intervalle regulier (ici 10ms)
  pour gerer les deplacement de la balle */
-const interval = setInterval(draw, 12);
+ const interval = setInterval(draw, 12);
  
-  
+
+ /* Script consacré au boutton qui fait apparaître les règles du jeu */
+
+
+ const rules = document.getElementById('rules');
+ const rulesBtn = document.getElementById('rules-btn');
+ const closeBtn = document.getElementById('close-btn');
+
+ rulesBtn.addEventListener("click", function() {
+    rules.classList.add('show');
+ });
+
+ closeBtn.addEventListener('click', function() {
+    rules.classList.remove('show');
+});
