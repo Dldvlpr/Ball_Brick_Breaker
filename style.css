@@ -57,6 +57,74 @@ ul > li > a {
   text-decoration: none;
   color: white;
 }
+
+/* Game's rules sections */
+
+.btn {
+    border-radius:16px;
+    font-family: "IM Fell English", serif;
+    cursor: help;
+    font-size: 9.6px;
+    padding: 0px;
+    outline: none;
+    background-color: #000000;
+    border: none; /*intégration*/
+    color: #ffffff;
+    transition: .2s ;
+    /*ease-out, ou ease-in à rajouter ??*/
+  }
+  
+  .rules {
+    background-image: url("images/regle/Team_404_fond_regles.png");
+    border-radius: 16px;
+    position: absolute; /*à revoir*/
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    color: #ffffff;
+    width: 22em;
+    height: 38em;
+    margin-top: 5em;
+    margin-left: -14em;
+    padding: 2em;
+    line-height: 1.7;
+    visibility: hidden;
+    opacity: 0;
+    transition-duration: 1.4s;
+}
+  
+.rules>h2 {
+    text-align: center;
+    font-size: x-large;
+}
+
+.rules>p {
+    font-size: 1.2em;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+}
+
+
+.rules.show {
+  visibility: visible;
+  opacity: 1; 
+}
+
+
+.btn:hover {
+    background-color: rgb(44, 44, 44);
+}
+  
+.btn:focus{
+    outline: none; /* à modifier*/
+}
+  
+/*.btn:active {
+    transform: (0.2); 
+} en conflit */
+
+
+
 /*  align-items:center; */
 
 .containerGames {
@@ -272,7 +340,17 @@ footer {
     font-size: 1rem;
     margin: 0 5em;
   }
+
+.rules {
+  width: 32em;
+  height: 31em;
+  margin-top: 2.4em;
+  margin-left: -24em;
+  padding: 1em;
+  }
 }
+
+
 @media screen and (min-width: 1024px) {
   .footer_social_medias {
     margin: 0 6em;
@@ -294,13 +372,37 @@ font-size: 0.5em;
   height: 30em;
   width: 50%;
 }
+
 footer {
   background-color: black;
   --text-color: rgb(200, 198, 198);
   color: var(--text-color);
 }
+
 .logo_footer{
   padding-top: 3em;
 } 
+
+.btn {
+  font-size: 12.8px;
+}
+
+.rules {
+  width: 36.5em;
+  height: 34em;
+  margin-top: 2.7em;
+  margin-left: -29em;
+  padding: 1.85em;
+  }
+
+.rules>h2 {
+    font-size: xx-large;
+}
+
+.rules>p {
+    font-size: 1.4em;
+    margin-bottom: 1.9rem;
+    margin-top: 0;
+  }
 } 
  
