@@ -12,7 +12,7 @@ header {
   display: flex;
 }
 
-.logo {
+.logo-header {
   height: 90%;
   width:auto;
 }
@@ -40,7 +40,7 @@ header {
   
 }
 
- ul {
+ul {
   list-style-type: none;
   display: flex;
   flex-direction: column;
@@ -49,49 +49,101 @@ header {
   font-size: 0.6em;
   padding: 0;
   width: 30vw;
- }
+}
 
  /*  align-items:center; */
 
+/*main content*/
 
-.containerGames {
-  height: 26em;
-}
-
-#screenGame {
+/*l'ecran de jeu s'adapte automatiquement*/
+ #screenGame {
   display: block; 
   margin: 0 auto;
   background-image: url("/images/background/underwater-fantasy-preview.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; 
   width: 100%;
   height: 100%;
-  
- }
+}
 
 /********** Logo et nom du jeu **********/
+
+.button-logo-bottom {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  background-color: black;
+}
+#directional-cross-left{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+#directional-cross-right{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+button{
+  text-align: center;
+  width: 50px;
+  height: 20px;
+  border-radius: 1;
+  
+}
+.logo_picture{
+  height: 16vh;
+} 
+
+.game_name {
+  text-align: center;
+  font-size: 0.9em;
+  height: 2%;
+  margin: 0;
+  background-color: black;
+
+  
+}
+.game_name > h2{
+  margin: 0;
+  padding-top: 2%;
+  color: white;
+}
 
 footer {
   background-color: black;
   --text-color: rgb(200, 198, 198);
-  color: var(--text-color);
-  bottom: 0;
+  color: var(--text-color); 
+  height: 1;
 }
 
-.logo_footer {
+.footer_social_medias {
   display: flex;
-  justify-content: center;
-  height: 15vh;
 }
 
-.game_name_footer {
+.fa-discord,
+.fa-twitter,
+.fa-telegram {
+  color: rgb(200, 198, 198);
+  width: 32%;
   text-align: center;
   font-size: 1em;
-  /*margin-top: 5%;*/
 }
 
+.footer-legal {
+  display: flex;
+  font-size: 0.7em; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+ 
 
 
+/*
 #game-over-notify {
     position: fixed;
     display: none;
@@ -104,6 +156,7 @@ footer {
     color: white;
     font-weight: 300;
 }
+
 .gameOverContent {
     display: flex;
     align-items: center;
@@ -111,10 +164,10 @@ footer {
     width:100%;
 }
 
-
+ */
 
 /* *************** SUCCESS *************** */
-#success-notify {
+/* #success-notify {
     position: fixed;
     display: none;
     align-items: center;
@@ -127,39 +180,38 @@ footer {
     color: white;
     font-weight: 300;
 }
+
 .successContent {
     text-align: right;
     margin: 50px 120px;
     width:100%;
 }
 
-*/
 
+ */
 /******** Accès aux réseaux sociaux *******/
 
-.footer_social_medias {
+/* .footer_social_medias {
   display: flex;
-  justify-content: center;
-  justify-content: space-around;
-  font-size: 2em;
-  /*margin: 1em 2em;*/
 }
 
 .fa-discord,
 .fa-twitter,
 .fa-telegram {
   color: rgb(200, 198, 198);
+  width: 32%;
+  text-align: center;
+  font-size: 1em;
 }
 
 .footer-legal {
   display: flex;
-  font-size: 0.7em; /*responsive*/
+  font-size: 0.7em; 
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 3px;
-  height: 88px;
 }
+
 .footer-legal1{
   display: flex;
   flex-direction: row;
@@ -173,13 +225,13 @@ footer {
 .footer-legal>div{
   text-align: center;
 }
-
+ */
 /******** Informations légales ********/
 
- @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) {
 
   .gameName > h1{
-    font-size: 2em;
+    font-size: 1.5em;
     text-align: right;
     padding-right: 5%;
   }
@@ -187,9 +239,7 @@ footer {
   ul{
     flex-direction: row;
     font-size: 0.8em;
-    width: 70vw;
-    
-    
+    width: 70vw; 
   }
 
   .game_name_footer {
@@ -250,5 +300,5 @@ footer {
 .logo_footer{
   padding-top: 3em;
 } 
-}
+} 
  
