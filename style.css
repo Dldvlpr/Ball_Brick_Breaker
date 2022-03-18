@@ -92,8 +92,7 @@ ul > li > a {
   display: flex;
   width: 100%;
   justify-content: center;
-  height: 20vh;
-  padding-top: 2vh;
+  
 }
 
 button{

@@ -4,12 +4,17 @@
 const canvas = document.getElementById("screenGame");
 const context = canvas.getContext("2d");
 
-/*Images à placer dans le canvas pour le score et les vies*/
+/*Images à placer dans le canvas pour le score et les vies et briques*/
 
 
 const LIFE_IMG = new Image();
 LIFE_IMG.src = "images/logo/life.png";
 
+const BRICK_CHEST = new Image;
+BRICK_CHEST.src = "images/logo/chest1.png"
+
+const PADDLE_KNIFE = new Image;
+PADDLE_KNIFE .src = "images/logo/Slice 2plank.png"
 /*const SCORE_IMG = new Image();
 SCORE_IMG.src = "img/logo/score.png";*/
 
@@ -56,8 +61,8 @@ const brickColumnCount = 17;
 const brickWidth = 40;
 const brickHeight = 30;
 const brickPadding = 3;
-const brickOffsetTop = 60;
-const brickOffsetLeft = 20;
+const brickOffsetTop = 80;
+const brickOffsetLeft = 35;
 const color = "#BB473B";
 
 
@@ -142,26 +147,22 @@ function collisionDetection() {
 
 // creation de la fonction de calcule du score
 function drawScore() {
-    context.font = "24px Arial";
+    context.font = "44px Arial";
     context.fillStyle = "black";
-    context.fillText("Score: "+score, 8, 35);
+    context.fillText("Score: "+score, 8, 53);
 }
 
 function drawLives() {
-    context.font = "20px Arial";
-    context.fillStyle = color;
-    context.fillText(lives,canvas.width-90, 20);
-    context.drawImage(LIFE_IMG, 350, 3, 32, 25);
+    context.font = "44px Arial";
+    context.fillStyle = "black";
+    context.fillText(lives,canvas.width-65, 53);
+    context.drawImage(LIFE_IMG, 680, 21, 45, 37);
 }
 
 /*fonction de creation de la raquette */
 function drawPaddle() {
-    context.beginPath();
-    context.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
-    context.fillStyle = color;
-    context.fill();
-
-    context.closePath();
+    context.drawImage(PADDLE_KNIFE,paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
+    
 }
 
 /*fonction pour gerer le deplaçement et l'arret de la palette et la colision avec le mur*/
@@ -191,11 +192,12 @@ function drawBricks() {
                 let brickY = (row*(brickHeight+brickPadding))+brickOffsetTop;
                 bricks[column][row].x = brickX;
                 bricks[column][row].y = brickY;
-                context.beginPath();
+                context.drawImage(BRICK_CHEST,brickX, brickY, brickWidth, brickHeight)
+                /* context.beginPath();
                 context.rect(brickX, brickY, brickWidth, brickHeight);
                 context.fillStyle = color;
                 context.fill();
-                context.closePath();
+                context.closePath(); */
             }
         }
     }
@@ -222,8 +224,8 @@ function drawBall() {
           x += dx;
           y += dy;
       } else {
-          x = paddleX + 37;
-          y = canvas.height - 25;
+          x = paddleX + 50;
+          y = canvas.height - 30;
       }
 
   }
