@@ -42,12 +42,12 @@ let lives = 3
 
 /*ici on defini les variable pour créer les brique le nombre de ligne de colonne largeur etc...
  on fait aussi en sorte qu'elle ne soit pas dessiner sur le bord du canvas avec les 2 dernier variables */
-const brickRowCount = 1;
-const brickColumnCount = 2;
+const brickRowCount = 10;
+const brickColumnCount = 17;
 const brickWidth = 40;
 const brickHeight = 30;
 const brickPadding = 3;
-const brickOffsetTop = 45;
+const brickOffsetTop = 60;
 const brickOffsetLeft = 20;
 const color = "#BB473B";
 
@@ -135,13 +135,13 @@ function collisionDetection() {
 function drawScore() {
     context.font = "24px Arial";
     context.fillStyle = "black";
-    context.fillText("Score: "+score, 8, 25);
+    context.fillText("Score: "+score, 8, 35);
 }
 
 function drawLives() {
     context.font = "24px Arial";
     context.fillStyle ="black";
-    context.fillText("Lives: "+lives,canvas.width-90, 20);
+    context.fillText("Lives: "+lives,canvas.width-90, 35);
 }
 
 /*fonction de creation de la raquette */

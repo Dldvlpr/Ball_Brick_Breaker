@@ -3,6 +3,7 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  overflow: hidden;
 }
 
 header {
@@ -101,7 +102,7 @@ button{
 .game_name {
   text-align: center;
   font-size: 0.9em;
-  height: 2%;
+  height: 5%;
   margin: 0;
   background-color: black;
 
@@ -114,14 +115,18 @@ button{
 }
 
 footer {
+  display: flex;
+  flex-direction: column;
   background-color: black;
   --text-color: rgb(200, 198, 198);
   color: var(--text-color); 
-  height: 1;
+  height: 1000px;
+
 }
 
 .footer_social_medias {
-  display: flex;
+  height: 3%;
+  
 }
 
 .fa-discord,
@@ -135,10 +140,11 @@ footer {
 
 .footer-legal {
   display: flex;
-  font-size: 0.7em; 
+  font-size: 0.5em; 
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+ /*  justify-content: space-between; */
+  margin: 0;
 }
  
 
