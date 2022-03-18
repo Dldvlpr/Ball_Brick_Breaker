@@ -1,9 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap");
+
 body {
   /*font-size: 16px;*/
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   overflow: hidden;
+  font-family: "IM Fell English", serif;
 }
 
 header {
@@ -15,7 +18,7 @@ header {
 
 .logo-header {
   height: 90%;
-  width:auto;
+  width: auto;
 }
 .logoPrincipal{
   width: 20vw;
@@ -27,42 +30,45 @@ header {
   align-items: center;
   width: 100vw;
   justify-content: space-between;
-  
-  
-  
 }
 
 .gameName h1 {
-  font-size: 0.7em;
+  font-size: 0.8em;
   text-align: center;
-  width: 100%;
-  
-  
-  
+  width: 100%; 
 }
 
 ul {
   list-style-type: none;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between;
+  width: 50em;
   font-size: 0.6em;
-  padding: 0;
-  width: 30vw;
+  margin-right: 5%;
 }
 
- /*  align-items:center; */
+ul > li {
+  color: rgb(255, 0, 85);
+  display: flex;
+  align-items: center;
+}
 
-/*main content*/
+ul > li > a {
+  text-decoration: none;
+  color: white;
+}
+/*  align-items:center; */
 
-/*l'ecran de jeu s'adapte automatiquement*/
- #screenGame {
-  display: block; 
+.containerGames {
+  height: 26em;
+}
+
+#screenGame {
+  display: block;
   margin: 0 auto;
   background-image: url("/images/background/underwater-fantasy-preview.png");
   background-repeat: no-repeat;
-  background-size: cover; 
+  background-size: cover;
   width: 100%;
   height: 100%;
 }
@@ -86,6 +92,8 @@ ul {
   display: flex;
   width: 100%;
   justify-content: center;
+  height: 20vh;
+  padding-top: 2vh;
 }
 
 button{
@@ -252,14 +260,12 @@ footer {
     font-size: 2.2em;
     margin-top: 2%;
   }
-
   .footer_social_medias {
     font-size: 3em;
     padding: 4vh;
     margin: 0 4em;
     display: flex;
   }
-
   .footer-legal {
     display: flex;
     flex-direction: row;
@@ -267,28 +273,21 @@ footer {
     font-size: 1rem;
     margin: 0 5em;
   }
-} 
-
+}
 @media screen and (min-width: 1024px) {
   .footer_social_medias {
     margin: 0 6em;
   }
 
-
-
-
 .gameName {
 font-size: 0.5em;
 }
-
 .mainContent{
   height: 30em;
 }
-
 .containerGames {
   height: 30em;
 }
-
 #screenGame {
   background-image: url("/images/background/underwater-fantasy-preview.png");
   background-repeat: no-repeat;
@@ -296,13 +295,11 @@ font-size: 0.5em;
   height: 30em;
   width: 50%;
 }
-
 footer {
   background-color: black;
   --text-color: rgb(200, 198, 198);
   color: var(--text-color);
 }
-
 .logo_footer{
   padding-top: 3em;
 } 
