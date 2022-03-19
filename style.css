@@ -294,9 +294,13 @@ footer-legal > h3 {
 /******** Informations légales ********/
 
 @media screen and (min-width: 768px) {
+  .logo-header {
+    margin-left: 12%;
+  }
+
   .gameName > h1 {
     font-size: 1.5em;
-    text-align: right;
+    text-align: left;
     padding-right: 5%;
   }
 
@@ -348,13 +352,20 @@ footer-legal > h3 {
     background-repeat: no-repeat;
   }
 
-  .footer_social_medias {
+  .logo-header {
+    margin-left: 23px;
+  }
+
+  .gameName > h1 {
+    font-size: 1.5em;
+    text-align: left;
+    padding-right: 5%;
+  }
+
+  logo .footer_social_medias {
     margin: 0 6em;
   }
 
-  .gameName {
-    font-size: 0.5em;
-  }
   .mainContent {
     height: 35em;
   }
