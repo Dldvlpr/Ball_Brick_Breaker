@@ -57,17 +57,10 @@ let lives = 3
 
 /*ici on defini les variable pour créer les brique le nombre de ligne de colonne largeur etc...
  on fait aussi en sorte qu'elle ne soit pas dessiner sur le bord du canvas avec les 2 dernier variables */
-<<<<<<< HEAD
-const brickRowCount = 8;
-const brickColumnCount = 14;
-const brickWidth = 20;
-const brickHeight = 10;
-=======
 const brickRowCount = 5;
 const brickColumnCount = 8;
 const brickWidth = 90;
 const brickHeight = 60;
->>>>>>> 941ad0ee95565c83966103eaeb5639042675df8f
 const brickPadding = 3;
 const brickOffsetTop = 80;
 const brickOffsetLeft = 30;
@@ -76,14 +69,7 @@ const color = "#BB473B";
 /*evenement d'ecoute pour l'appui sur les fleche droite ou gauche pour gerer le deplacement de la palette */
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
-<<<<<<< HEAD
-
-
-/* document.addEventListener("mousemove", mouseMoveHandler, false); */
-
-=======
 //document.addEventListener("mousemove", mouseMoveHandler, false);
->>>>>>> 941ad0ee95565c83966103eaeb5639042675df8f
 /*fonction qui verifie lorsque les touche droite et gauche sont enfonçé et relaché 
 et qui modifie les variable touche présser qui sont initialisé a false et passe a true lorsqu'elle le sont
 * le parametre e represente l'evenement (appui)  */
@@ -296,11 +282,7 @@ function draw() {
     drawScore();
     drawLives()
     lostLife()
-<<<<<<< HEAD
-    gameOver()  
-=======
     gameOver()    
->>>>>>> 941ad0ee95565c83966103eaeb5639042675df8f
 }
 
 /*fonction qui appel la fonction draw créer plus haut avec un intervalle regulier (ici 10ms)
