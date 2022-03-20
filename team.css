@@ -38,7 +38,6 @@ body {
   margin: 1.25em;
   box-shadow: 1px 3px 5px #000;
   border-radius: 1em;
-  overflow: hidden; 
   text-align: center;
   background-color: rgb(32, 38, 71);
 }
@@ -84,7 +83,9 @@ body {
   padding: 0 6px;
 }
 
-/*.fab a:hover{
-  color: black;
-} trouver la manip, quand on clique, faire apparaître les logos en noir, et réduire légèrement l'icône*/
+.fab:hover {
+  transform: scale(1.4); 
+}
+
+
 
