@@ -369,3 +369,6 @@ function draw() {
  closeBtn.addEventListener('click', function() {
     rules.classList.remove('show');
 });
+
+/*const transition = document.getElementById('#ourTeam');
+transition.style.transition = ('all 1s linear');*/
