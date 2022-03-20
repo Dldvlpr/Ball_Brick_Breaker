@@ -3,7 +3,8 @@
 
 const canvas = document.getElementById("screenGame");
 const context = canvas.getContext("2d");
-
+const rightButton = document.getElementById("cross-right");
+const leftButton = document.getElementById("cross-left");
 
 /*Images à placer dans le canvas pour le score et les vies et briques*/
 
@@ -42,13 +43,13 @@ BRICK_HIT.src = "sounds/brick_hit.mp3";
 deplacement de la balle, position d'origine de la balle   */
 
 let x = canvas.width/2;
-let y = canvas.height -30;
+let y = canvas.height -25;
 let dx = 2;
 let dy = -3;
 let start = false;
-const ballRadius = 10;
+const ballRadius = 9;
 const paddleHeight = 10;
-const paddleWidth = 80;
+const paddleWidth = 75;
 let paddleX = (canvas.width-paddleWidth)/2;
 let rightPressed = false;
 let leftPressed = false;
@@ -57,58 +58,112 @@ let lives = 3
 
 /*ici on defini les variable pour créer les brique le nombre de ligne de colonne largeur etc...
  on fait aussi en sorte qu'elle ne soit pas dessiner sur le bord du canvas avec les 2 dernier variables */
-const brickRowCount = 5;
-const brickColumnCount = 8;
-const brickWidth = 90;
-const brickHeight = 60;
+const brickRowCount = 6;
+const brickColumnCount = 10;
+const brickWidth = 30;
+const brickHeight = 20;
 const brickPadding = 3;
-const brickOffsetTop = 80;
-const brickOffsetLeft = 30;
+const brickOffsetTop = 50;
+const brickOffsetLeft = 16;
 const color = "#BB473B";
 
 /*evenement d'ecoute pour l'appui sur les fleche droite ou gauche pour gerer le deplacement de la palette */
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
-//document.addEventListener("mousemove", mouseMoveHandler, false);
+leftButton.addEventListener("mousedown", keyDownHandler,false);
+rightButton.addEventListener("mousedown", HandlerMouseDown, false);
+leftButton.addEventListener("mouseup", keyUpHandler, false);
+rightButton.addEventListener("mouseup", HandlerMouseUp, false);
+
+/* document.addEventListener("mousemove", mouseMoveHandler, false); */
+
 /*fonction qui verifie lorsque les touche droite et gauche sont enfonçé et relaché 
 et qui modifie les variable touche présser qui sont initialisé a false et passe a true lorsqu'elle le sont
 * le parametre e represente l'evenement (appui)  */
-function keyDownHandler(events) {
-    if(events.keyCode === 32){
+function keyDownHandler(events) 
+{
+    if(events.keyCode === 32)
+    {
         start = true;
     }
-    if(events.keyCode === 39 ) {
+    if(events.keyCode === 39 )
+    {
         rightPressed = true;
     }
-    else if(events.keyCode === 37) {
+
+    if(events.keyCode === 37)
+    {
         leftPressed = true;
     }
+    if (events.button === 0)
+    {
+        
+        leftPressed = true;
+    
+    }
+    
 }
 
 function keyUpHandler(events) {
     
-    if(events.keyCode === 39) {
+    if(events.keyCode === 39 ) 
+    {
         rightPressed = false;
     }
-    else if(events.keyCode === 37) {
+    if(events.keyCode === 37) 
+    {
         leftPressed = false;
     }
+    if (events.button === 0)
+    {
+        
+        leftPressed = false;
+    
+    }
 }
+
+function HandlerMouseDown(events)
+{
+    if (events.button === 0)
+    {
+        
+        rightPressed = true;
+    
+    }
+    
+    
+}
+function HandlerMouseUp(events)
+{
+    if (events.button === 0)
+    {
+        
+        rightPressed = false;
+    
+    }
+    
+    
+}
+
 
 
 
 
 /*fonction pour gerer le deplaçement et l'arret de la palette et la colision avec le mur*/
-function paddleMove(){
-    if(rightPressed) {
+function paddleMove()
+{
+    if(rightPressed)
+     {
         paddleX += 8;
         if (paddleX + paddleWidth > canvas.width){
             paddleX = canvas.width - paddleWidth;
         }
     }
-    else if(leftPressed) {
+    else if(leftPressed)
+     {
         paddleX -= 8;
-        if (paddleX < 0){
+        if (paddleX < 0)
+        {
             paddleX = 0;
         }
     }
@@ -129,26 +184,34 @@ function paddleMove(){
 
 //creation du tableau et de sa boucle qui contiendra les brique une fois créer
 const bricks = [];
-for(let column=0; column<brickColumnCount; column++) {
+for(let column=0; column<brickColumnCount; column++) 
+{
     bricks[column] = [];
-    for(let row=0; row<brickRowCount; row++) {
+    for(let row=0; row<brickRowCount; row++) 
+    {
         bricks[column][row] = { x: 0, y: 0, statusbar: 1 };
     }
 }
 
 
 /*fonction pour detecter la colision de la balle avec les brique en fonction de la position de chacune d'entre elles */
-function collisionDetection() {
-    for(let column=0; column<brickColumnCount; column++) {
-        for(let row=0; row<brickRowCount; row++) {
+function collisionDetection() 
+{
+    for(let column=0; column<brickColumnCount; column++)
+    {
+        for(let row=0; row<brickRowCount; row++)
+        {
             let brick = bricks[column][row];
-            if (brick.statusbar === 1){
-                if(x > brick.x && x < brick.x+brickWidth && y > brick.y && y < brick.y+brickHeight) {
+            if (brick.statusbar === 1)
+            {
+                if(x + ballRadius > brick.x && (x - ballRadius < brick.x + brickWidth || x < brick.x + brickWidth )   && y + ballRadius > brick.y && (y - ballRadius < brick.y+brickHeight ||y < brick.y+brickHeight))
+                {
                     BRICK_HIT.play(); /*************** */
                     dy = -dy;
                     brick.statusbar = 0;
                     score += 5;
-                    if(score == brickRowCount*brickColumnCount*5) {
+                    if(score === brickRowCount*brickColumnCount*5)
+                    {
                         WIN.play(); /*********** */
                         alert("C'est gagné, Bravo!");
                         document.location.reload();
@@ -162,16 +225,16 @@ function collisionDetection() {
 
 // creation de la fonction de calcule du score
 function drawScore() {
-    context.font = "44px Arial";
+    context.font = "20px Arial";
     context.fillStyle = "black";
-    context.fillText("Score: "+score, 8, 53);
+    context.fillText("Score: "+score, 8, 30);
 }
 
 function drawLives() {
     context.font = "24px";
     context.fillStyle = "black";
-    context.fillText(lives,canvas.width-65, 53);
-    context.drawImage(LIFE_IMG, 680, 21, 45, 37);
+    context.fillText(lives,canvas.width-30, 30);
+    context.drawImage(LIFE_IMG, 305, 15, 20, 20);
 }
 
 /*fonction de creation de la raquette */
@@ -224,8 +287,8 @@ function drawBall() {
           x += dx;
           y += dy;
       } else {
-          x = paddleX + 60;
-          y = canvas.height - 30;
+          x = paddleX + 40;
+          y = canvas.height -20;
       }
 
   }
@@ -236,9 +299,11 @@ function drawBall() {
         start = false
         rightPressed = false;
         leftPressed = false;
+        paddleX = (canvas.width-paddleWidth)/2;
+        dx = 2;
+        dy = -3;
         LIFE_LOST.play();
         startGame();
-        paddleX = (canvas.width-paddleWidth)/2;
         alert("vous avez perdu une vie");
         
         
@@ -259,7 +324,7 @@ haut et en bas*/
     if(y + dy < ballRadius) {
         dy = -dy;
     }  if (y + dy > canvas.height-ballRadius) {
-        if(x > paddleX && x < paddleX + paddleWidth) {
+        if(x + ballRadius > paddleX && (x - ballRadius < paddleX + paddleWidth || x < paddleX + paddleWidth)) {
             PADDLE_HIT.play();
             dy = -dy;
    
@@ -282,12 +347,12 @@ function draw() {
     drawScore();
     drawLives()
     lostLife()
-    gameOver()    
+    gameOver()  
 }
 
 /*fonction qui appel la fonction draw créer plus haut avec un intervalle regulier (ici 10ms)
  pour gerer les deplacement de la balle */
- const interval = setInterval(draw, 12);
+ const interval = setInterval(draw, 14);
  
 
  /* Script consacré au boutton qui fait apparaître les règles du jeu */
