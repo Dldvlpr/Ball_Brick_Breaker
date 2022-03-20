@@ -288,7 +288,7 @@ function drawBall() {
           y += dy;
       } else {
           x = paddleX + 40;
-          y = canvas.height -25;
+          y = canvas.height -20;
       }
 
   }
