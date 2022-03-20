@@ -74,18 +74,20 @@ body {
   padding: 0.438em;
 }
 
-.fab
- {
+.fab {
   font-size: 20px;
   text-decoration: none;
   color: white;
   margin-top: 15px;
   padding: 0 6px;
+  opacity: 0.5;
 }
 
 .fab:hover {
   transform: scale(1.4); 
+  opacity:1;
 }
+
 
 
 
