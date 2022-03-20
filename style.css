@@ -7,6 +7,7 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: "IM Fell English", serif;
+  height: 800px;
 }
 
 header {
@@ -124,11 +125,6 @@ header > ul > li > a {
 } en conflit */
 
 
-
-/*  align-items:center; */
-
-
-
 #screenGame {
   display: block;
   margin: 0 auto;
@@ -139,7 +135,16 @@ header > ul > li > a {
   
 }
 
-/********** Logo et nom du jeu **********/
+/********** Logo, nom du jeu et bouton **********/
+
+footer {
+  background-color: black;
+  --text-color: rgb(200, 198, 198);
+  color: var(--text-color); 
+  height: 100%;
+  
+
+}
 
 .button-logo-bottom {
   display: flex;
@@ -147,6 +152,7 @@ header > ul > li > a {
   flex-direction: row;
   align-items: center;
   background-color: black;
+  padding-top: 10%;
 }
 
 .game_name-desktop{
@@ -188,7 +194,7 @@ header > ul > li > a {
 
 
 .logo_picture{
-  height: 16vh;
+  height: 22vh;
 } 
 
 .game_name {
@@ -196,6 +202,7 @@ header > ul > li > a {
   font-size: 0.9em;
   height: 5%;
   margin: 0;
+  padding-top: 5%;
   background-color: black;
 
   
@@ -206,12 +213,11 @@ header > ul > li > a {
   color: white;
 }
 
-footer {
-  background-color: black;
-  --text-color: rgb(200, 198, 198);
-  color: var(--text-color); 
-  height: 800px;
 
+/******** Accès aux réseaux sociaux *******/
+
+.footer_social_team404{
+  padding-top: 5%;
 }
 
 .footer_social_medias {
@@ -249,6 +255,7 @@ footer {
   text-align: center;
   font-size: 0.5em; 
   align-items: center;
+  padding-top: 5%;
   
 }
 footer-legal > h3{
@@ -304,81 +311,37 @@ footer-legal > h3{
 
 
  */
-/******** Accès aux réseaux sociaux *******/
-
-/* .footer_social_medias {
-  display: flex;
-}
-
-.fa-discord,
-.fa-twitter,
-.fa-telegram {
-  color: rgb(200, 198, 198);
-  width: 32%;
-  text-align: center;
-  font-size: 1em;
-}
-
-.footer-legal {
-  display: flex;
-  font-size: 0.7em; 
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.footer-legal1{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-}
-
-
-
-
-.footer-legal>div{
-  text-align: center;
-}
- */
-/******** Informations légales ********/
-
-  @media screen and (min-width: 768px) {
-
+  @media only screen and (max-width: 1024px) and (min-width: 768px ) {
+   
+/*
   .gameName > h1{
+    display: none;
     font-size: 1.5em;
     text-align: right;
     padding-right: 5%;
   }
 
-  ul{
+  header > ul{
     flex-direction: row;
     font-size: 0.8em;
     width: 70vw; 
-  }
-
-  #screenGame{
-    
-  
-  }
-  
+  }  
 
   .game_name{
+    display: none;
     font-size: 2.2em;
     margin-top: 2%;
   }
+
+  .logo_picture{
+    height: 10vh;
+  } 
+
   .footer_social_medias {
     font-size: 3em;
     padding: 4vh;
     margin: 0 4em;
     display: flex;
-  }
-  .footer-legal {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    font-size: 1rem;
-    margin: 0 5em;
   }
 
 .rules {
@@ -387,152 +350,155 @@ footer-legal > h3{
   margin-top: 2.4em;
   margin-left: -24em;
   padding: 1em;
+  }*/
+} 
+  
+  @media screen and (min-width: 768px) {
+
+  body{
+    height: 1000px;
+    background-image: url("images/background/pirate-5996147 1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;  
   }
-}
+
+  header {
+    height: 10vh;
+  }
+
+  header > ul{
+    font-size: 1.5em;
+  }
+
+  .gameName {
+    font-size: 2.5em;
+    }
 
 
-@media screen and (min-width: 1024px) {
+  .btn {
+    font-size: 1em;
+  }
 
-body{
-  background-image: url("images/background/pirate-gf88c4d867_1920 1(2).png");
-  background-repeat: no-repeat;
-  
-  
+  .rules {
+    width: 36.5em;
+    height: 34em;
+    margin-top: 2.7em;
+    margin-left: -29em;
+    padding: 1.85em;
+    }
+
+  .rules>h2 {
+      font-size: xx-large;
+  }
+
+  .rules>p {
+      font-size: 1.4em;
+      margin-bottom: 1.9rem;
+      margin-top: 0;
+    }
+
+  .mainContent{
+    height: 35em;
+  }
+
+   #screenGame {
+    height: 30em;
+    width: initial;
+    margin-top: 5%;
+    border-radius: 10px;
     
-}
+  } 
 
-header {
-  height: 10vh;
-}
-
-header > ul{
-  font-size: 1.5em;
-}
-
-.gameName {
-  font-size: 2.5em;
+  footer {
+    background-color: black;
+    --text-color: rgb(200, 198, 198);
+    color: var(--text-color);
+    
+    
   }
-
-
-.btn {
-  font-size: 1em;
-}
-
-.rules {
-  width: 36.5em;
-  height: 34em;
-  margin-top: 2.7em;
-  margin-left: -29em;
-  padding: 1.85em;
-  }
-
-.rules>h2 {
-    font-size: xx-large;
-}
-
-.rules>p {
-    font-size: 1.4em;
-    margin-bottom: 1.9rem;
-    margin-top: 0;
-  }
-
-.mainContent{
-  height: 35em;
-}
-
-#screenGame {
-  background-image: url("/images/background/underwater-fantasy-preview.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 30em;
-  width: auto;
-  margin-top: 5%;
-  border-radius: 10px;
   
-}
+  .button-logo-bottom{
+    justify-content: space-around;
+    padding-top: 0;
+  }
 
-footer {
-  background-color: black;
-  --text-color: rgb(200, 198, 198);
-  color: var(--text-color);
-  
-}
- 
-.button-logo-bottom{
+
+  .game_name-desktop{
+    display: initial;
+    font-size: 2em;
+  }
+
+  .logo_picture-desktop{
+    display: initial;
+    height: 16vh;
+  }
+
+  .logo_picture{
+    height: 16vh;
+  } 
+  .game_name{
+    display: none;
+  }
+
+  .directional-cross-right{
+    display: none;
+  }
+  .directional-cross-left{
+    display: none;
+  }
+
+  /******** Accès aux réseaux sociaux *******/
+
+  .footer_social_team404{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0;
+  }
+
+  .footer_social_medias {
+    display: flex;
+    justify-content: space-around;
+    width: 35%;    
+    align-items: center;
+  }
+
+  .footer_social_medias > ul{
+  width: 100;
   justify-content: space-around;
-}
 
-.logo_footer{
-  padding-top: 3em;
-}
+  }
 
-.game_name-desktop{
-  display: initial;
+  .footer_social_medias > ul > li{
+  width: initial;
+  width: 33%;
+  margin-right: 15%;
+
+  }  
+
+  .fa-discord,
+  .fa-twitter,
+  .fa-telegram{
   font-size: 2em;
-}
+  width: 100%;
 
-.logo_picture-desktop{
-  display: initial;
-  height: 16vh;
-}
-.game_name{
-  display: none;
-}
+  }
 
-.directional-cross-right{
-  display: none;
-}
-.directional-cross-left{
-  display: none;
-}
+  .footer-team-404 {
+    display: flex;
+    justify-content: center;
+    width: 10%;
+    padding-top: 0;
+    
+  }
 
-.footer_social_team404{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
+  .footer-team-404 > h3{
+    font-size: 3em;
+    text-align: center;
+    
 
-.footer_social_medias {
-  display: flex;
-  justify-content: space-around;
-  width: 35%;    
-  align-items: center;
-}
+  } 
 
-.footer_social_medias > ul{
-width: 100;
-justify-content: space-around;
-
-}
-
-.footer_social_medias > ul > li{
-width: initial;
-width: 33%;
-margin-right: 15%;
-
-}  
-
-.fa-discord,
-.fa-twitter,
-.fa-telegram{
-font-size: 2em;
-width: 100%;
-
-}
-
-.footer-team-404 {
-  display: flex;
-  justify-content: center;
-  width: 10%;
-  
-}
-
-.footer-team-404 > h3{
-  font-size: 3em;
-  text-align: center;
-  
-
-}
-}
+}   
  
  
