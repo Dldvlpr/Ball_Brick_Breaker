@@ -190,7 +190,7 @@ footer {
 
 
 .logo_picture{
-  height: 22vh;
+  height: 16vh;
 } 
 
 .game_name {
@@ -236,10 +236,8 @@ footer {
 .fa-discord,
 .fa-twitter,
 .fa-telegram {
-
   color: rgb(200, 198, 198);
   width: 33%;
-  
   font-size: 1em;
 }
 
@@ -403,8 +401,6 @@ footer-legal > h3 {
     background-color: black;
     --text-color: rgb(200, 198, 198);
     color: var(--text-color);
-    
-    
   }
   
   .button-logo-bottom{

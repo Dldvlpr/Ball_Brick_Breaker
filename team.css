@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap");
+
+/* Le travail a d'abord été fait en pixels puis un convertisseurs en em a été utilisé pour garder la logique globale*/
+
+* {
+  margin: 0;
+  padding: 0;
+  /*box-sizing: border-box;*/
+  transition: all 0.5s ease-in;
+}
+
+body {
+  background: rgb(130, 136, 167);
+  font-family: "IM Fell English", serif;
+}
+
+
+#ourTeam {
+  font-size: 3.8em;
+  margin-top: 0.6em;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  color: rgb(205, 204, 212);
+  /*animation: fadein 2s; */
+}
+
+.backgroundImgDev {
+  border-radius: 1em;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap; /* pour rendre le tout responsive, ne pas toucher*/
+}
+
+.card {
+  height: 34.375em;
+  width: 18.125em;
+  margin: 1.25em;
+  box-shadow: 1px 3px 5px #000;
+  border-radius: 1em;
+  /*overflow: hidden; a vérifier pour les autres navigateurs*/
+  text-align: center;
+  background-color: rgb(32, 38, 71);
+}
+
+.card .section_dev img {
+  width: 100%;
+  /*heigth: 230px; */
+  /*object-fit: cover; non utile pour ma photo*/
+  clip-path: polygon(0 0, 100% 0%, 100% 70%, 45% 100%, 0 70%);
+}
+
+.card .pic img {
+  height: 8em;
+  width: 8em;
+  border-radius: 30%;
+  border: 10px solid rgb(32, 29, 48);
+  margin-top: -90px;
+  position: relative;
+}
+
+.card .infosDev h3 {
+  color: #f0f0f0;
+  font-size: 20px;
+  padding: 10px 0;
+}
+
+.card .infosDev span {
+  font-size: 15px;
+  color: rgb(182, 157, 49);
+}
+
+.card .infosDev p {
+  font-size: 0.813em;
+  padding: 0.625em 1.25;
+  color: rgb(205, 204, 212);
+  padding: 0.438em;
+}
+
+/*.iconsTeam a{
+  font-size: 30px;
+  text-decoration: none;
+  color: white;
+  margin-top: 20px;
+  padding: 0 5px;
+}*/
+
+.fab
+ {
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  margin-top: 15px;
+  padding: 0 6px;
+}
+
+/*.fab a:hover{
+  color: black;
+} trouver la manip, quand on clique, faire apparaître les logos en noir, et réduire légèrement l'icône*/
+
+@media screen and (min-width: 1024px) {
+
+}
