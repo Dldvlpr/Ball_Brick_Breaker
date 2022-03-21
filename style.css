@@ -1,13 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap");
 
 body {
-  /*font-size: 16px;*/
+  font-size: 16px;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  overflow: hidden;
   font-family: "IM Fell English", serif;
-  height: 800px;
 }
 
 header {
@@ -142,6 +140,10 @@ footer {
   --text-color: rgb(200, 198, 198);
   color: var(--text-color); 
   height: 100%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  
   
 
 }
@@ -314,9 +316,9 @@ footer {
    @media screen and (min-width: 768px) {
    
   body{
-    background-image: url("images/background/pirate-5996147(1) 1tablette 1tablette2(1).png");
+    background-image: url("images/background/pirate-5996147(1) 1tablette 1tablette2(1)-min.png");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     
     
   }
@@ -422,8 +424,8 @@ footer {
   @media screen and (min-width: 1024px) {
 
   body {
-    height: 1000px;
-    background-image: url("images/background/pirate-5996147 1.jpg");
+    height: initial;
+    background-image: url("images/background/pirate-5996147 1-min(1).png");
     background-repeat: no-repeat;
     background-size: cover;  
   }
@@ -466,7 +468,7 @@ footer {
     }
 
   .mainContent {
-    height: 35em;
+    height: 32em;
   }
 
    #screenGame {
@@ -475,14 +477,6 @@ footer {
     border-radius: 10px;
     
   } 
-
-  footer {
-    background-color: black;
-    --text-color: rgb(200, 198, 198);
-    color: var(--text-color);
-    
-    
-  }
   
   .button-logo-bottom {
     justify-content: space-around;
@@ -535,8 +529,7 @@ footer {
   .footer_social_medias > ul {
   width: 100;
   justify-content: space-around;
-  padding-top: 0;
-
+  padding-top: 0
   }
 
   .footer_social_medias > ul > li {
@@ -544,7 +537,6 @@ footer {
   width: 33%;
   margin-right: 15%;
   font-size: 1em;
-
   }  
 
 
@@ -555,18 +547,13 @@ footer {
     width: 40%;
     height: initial;
     padding-top: 0;
-    margin-top: 0;
-    
+    margin-top: 0;  
   }
 
   .footer-team-404 > h3 {
     width: 100%;
     font-size: 2.5em;
     text-align: center;
-    
-    
-    
-
   } 
 
 }   
