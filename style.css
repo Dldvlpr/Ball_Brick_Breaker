@@ -58,6 +58,18 @@ header > ul > li > a {
   text-decoration: none;
   color: white;
 }
+/* Game Over pop-up*/
+
+#game-over {
+  position: absolute; 
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  border: 2px solid;
+  margin-left: 5em;
+  margin-top: 2em;
+}
 
 /* Game's rules sections */
 
@@ -437,6 +449,7 @@ footer {
     }
 
 
+
   .btn {
     font-size: 1em;
   }
@@ -546,6 +559,7 @@ footer {
     height: 30em;
     width: 50%;
   }
+
 
   footer {
     background-color: black;

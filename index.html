@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
+
         <header>
             <div class="logoPrincipal">
                 <img class="logo-header" src=images/logo/petitLogo.png alt="logo team404 pirate" srcset="">
@@ -32,8 +33,13 @@
                 <li><a href="login">Login</a></li>
             </ul>
         </header>
+        
         <div class="mainContent">
             
+            <div id="game-over">
+                <img src="images/Game-Over/Game-Over-def.png" id="you-lose" width="200px" height="200px">
+            </div>
+
             <div class="containerGames">
                 <canvas id="screenGame" width="520" height="400" ></canvas>
             </div>
@@ -103,7 +109,6 @@
             <h3>© Team 404</h3>
         </div>
     </footer>
-
 
     <script src="https://kit.fontawesome.com/d2f74ea28b.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
