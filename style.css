@@ -516,6 +516,9 @@ footer {
     justify-content: space-around;
     padding: 0;
   }
+}
+
+@media screen and (min-width: 1024px) {
   .footer_social_medias {
     display: flex;
     justify-content: space-around;
@@ -524,38 +527,33 @@ footer {
     padding-top: 0;
   }
 
-  .footer_social_medias > ul {
-  width: 100;
-  justify-content: space-around;
-  padding-top: 0;
-
+  .gameName {
+    font-size: 0.5em;
   }
 
-  .footer_social_medias > ul > li {
-  width: initial;
-  width: 33%;
-  margin-right: 15%;
-  font-size: 1em;
-
-  }  
-
-
-
-  .footer-team-404 {
-    display: flex;
-    justify-content: center;
-    width: 40%;
-    height: initial;
-    padding-top: 0;
-    margin-top: 0;
-    
+  .mainContent {
+    width: 40vw;
+    height: 30em;
   }
 
-  .footer-team-404 > h3 {
-    width: 100%;
-    font-size: 2.5em;
-    text-align: center;
-  } 
-}   
- 
- 
+  .containerGames {
+    height: 30em;
+  }
+  #screenGame {
+    background-image: url("/images/background/underwater-fantasy-preview.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30em;
+    width: 50%;
+  }
+
+  footer {
+    background-color: black;
+    --text-color: rgb(200, 198, 198);
+    color: var(--text-color);
+  }
+
+  .logo_footer {
+    padding-top: 3em;
+  }
+}
