@@ -8,10 +8,10 @@ const LIFE_IMG = new Image();
 LIFE_IMG.src = "images/logo/life.png";
 
 const BRICK_CHEST = new Image;
-BRICK_CHEST.src = "images/brique/chest.png"
+BRICK_CHEST.src = "images/brique/chest.png";
 
 const PADDLE_KNIFE = new Image;
-PADDLE_KNIFE .src = "images/logo/Slice 2plank.png"
+PADDLE_KNIFE .src = "images/logo/Slice 2plank.png";
 
 const SCORE_IMG = new Image();
 SCORE_IMG.src = "images/logo/score.png";
@@ -49,7 +49,7 @@ let paddleX = (canvas.width-paddleWidth)/2;
 let rightPressed = false;
 let leftPressed = false;
 let score = 0;
-let lives = 3 
+let lives = 3; 
 const brickRowCount = 5;
 const brickColumnCount = 15;
 const brickWidth = 30;
