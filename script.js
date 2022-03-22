@@ -3,8 +3,11 @@
 
 const canvas = document.getElementById("screenGame");
 const context = canvas.getContext("2d");
-const rightButton = document.getElementById("cross-right");
+const rightButton = document.getElementById("cross-right")
 const leftButton = document.getElementById("cross-left");
+
+
+
 
 /*Images à placer dans le canvas pour le score et les vies et briques*/
 
@@ -49,7 +52,7 @@ let dy = -3;
 let start = false;
 const ballRadius = 9;
 const paddleHeight = 10;
-const paddleWidth = 75;
+const paddleWidth = 85;
 let paddleX = (canvas.width-paddleWidth)/2;
 let rightPressed = false;
 let leftPressed = false;
@@ -58,8 +61,8 @@ let lives = 3
 
 /*ici on defini les variable pour créer les brique le nombre de ligne de colonne largeur etc...
  on fait aussi en sorte qu'elle ne soit pas dessiner sur le bord du canvas avec les 2 dernier variables */
-const brickRowCount = 6;
-const brickColumnCount = 10;
+const brickRowCount = 5;
+const brickColumnCount = 15;
 const brickWidth = 30;
 const brickHeight = 20;
 const brickPadding = 3;
@@ -234,7 +237,7 @@ function drawLives() {
     context.font = "24px";
     context.fillStyle = "black";
     context.fillText(lives,canvas.width-30, 30);
-    context.drawImage(LIFE_IMG, 305, 15, 20, 20);
+    context.drawImage(LIFE_IMG, 465, 15, 20, 20);
 }
 
 /*fonction de creation de la raquette */
