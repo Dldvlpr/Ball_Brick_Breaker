@@ -194,14 +194,9 @@ function collisionDetectionBricks()
                     dy = -dy;
                     brick.statusbar = 0;
                     score += 5;
-<<<<<<< HEAD
-                    if(score == brickRowCount*brickColumnCount*5) {
-                        WIN.play(); /*********** */
-=======
                     if(score === brickRowCount*brickColumnCount*5)
                     {
                         WIN.play();
->>>>>>> 87c538c98c36725917c5290811d715f7114e1bfd
                         alert("C'est gagné, Bravo!");
                         document.location.reload();
                         clearInterval(interval);
@@ -220,19 +215,7 @@ function drawScore()
     context.fillText(+score, 48, 30);
     context.drawImage(SCORE_IMG,20, 13, 20, 20);
 }
-<<<<<<< HEAD
 
-function drawLives() {
-    context.font = "20px Arial";
-<<<<<<< HEAD
-    context.fillStyle ="black";
-    context.fillText("Lives: "+lives,canvas.width-90, 20);
-=======
-    context.fillStyle = color;
-    context.fillText(lives,canvas.width-90, 20);
-    context.drawImage(LIFE_IMG, 350, 3, 32, 25);
->>>>>>> 94d032552d1313efbeed38d2d5f5ddabe667ed4d
-=======
 /* affichage img vie*/
 function drawLives()
 {
@@ -240,7 +223,6 @@ function drawLives()
     context.fillStyle = "black";
     context.fillText(lives,canvas.width-30, 30);
     context.drawImage(LIFE_IMG, 465, 13, 20, 20);
->>>>>>> 87c538c98c36725917c5290811d715f7114e1bfd
 }
 
 /*creation paddle */
@@ -342,11 +324,7 @@ function gameOver()
         GAME_OVER.play();
         alert("GAME OVER");
         document.location.reload();
-<<<<<<< HEAD
-        clearInterval(interval);  // obligatoire pour arreter le jeux sur chrome
-=======
         clearInterval(interval);
->>>>>>> 87c538c98c36725917c5290811d715f7114e1bfd
     }  
 }
 /*appel de toutes les fonctions */
@@ -364,11 +342,6 @@ function draw()
     drawScore();
     drawLives()
     lostLife()
-<<<<<<< HEAD
-    gameOver()
-      
-=======
->>>>>>> 87c538c98c36725917c5290811d715f7114e1bfd
 }
 
 /* appel fonction draw intervalle regulier */

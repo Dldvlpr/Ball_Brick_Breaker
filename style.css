@@ -48,11 +48,7 @@ header > ul {
   margin-right: 5%;
 }
 
-<<<<<<< HEAD
-ul > li {
-=======
 header > ul > li {
->>>>>>> 87c538c98c36725917c5290811d715f7114e1bfd
   color: rgb(255, 0, 85);
   display: flex;
   align-items: center;
