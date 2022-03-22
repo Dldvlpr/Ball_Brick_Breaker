@@ -75,7 +75,7 @@ header > ul > li > a {
     border-radius:16px;
     font-family: "IM Fell English", serif;
     cursor: help;
-    font-size: 9.6px;
+    font-size: .6px;
     padding: 0px;
     outline: none;
     background-color: #000000;
@@ -452,7 +452,7 @@ footer {
 
   .gameName > h1 {
     font-size: 2em;
-    text-align: center;
+    text-align: left;
     }
 
 
@@ -488,8 +488,13 @@ footer {
     width: initial;
     margin-top: 5%;
     border-radius: 10px;
-    
   } 
+
+  .close-btn {
+    font-size: 1.4em;
+    width: 80%;
+    margin-left: 2.8em;
+  }
   
   .button-logo-bottom {
     justify-content: space-around;
@@ -500,7 +505,7 @@ footer {
   .game_name-desktop {
     display: initial;
     font-size: 2em;
-    text-shadow: 1px 1px 50px rgb(201, 198, 198);
+    text-shadow: 1px 1px 20px rgb(201, 198, 198);
   }
 
   .logo_picture-desktop {
@@ -523,7 +528,7 @@ footer {
     display: none;
   }
 
-  /******** Accès aux réseaux sociaux *******/
+    /******** Accès aux réseaux sociaux *******/
 
   .footer_social_team404 {
     display: flex;
