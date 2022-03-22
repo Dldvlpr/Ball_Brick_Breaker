@@ -62,9 +62,8 @@ header > ul > li > a {
   position: absolute; 
   display: flex;
   justify-content: center;
-  opacity: 0;
-  visibility: hidden;
-  border: 2px solid;
+  opacity: 1;
+  visibility: visible;
   margin-left: 5em;
   margin-top: 2em;
 }
