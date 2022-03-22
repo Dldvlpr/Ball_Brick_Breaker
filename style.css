@@ -5,7 +5,9 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  overflow: hidden;
   font-family: "IM Fell English", serif;
+  height: 800px;
 }
 
 header {
@@ -15,9 +17,12 @@ header {
   display: flex;
 }
 
-.logo {
+.logo-header {
   height: 90%;
   width: auto;
+}
+.logoPrincipal {
+  width: 20vw;
 }
 
 .gameName {
@@ -31,10 +36,10 @@ header {
 .gameName h1 {
   font-size: 0.8em;
   text-align: center;
-  width: 40vw;
+  width: 100%;
 }
 
-ul {
+header > ul {
   list-style-type: none;
   display: flex;
   justify-content: space-between;
@@ -43,21 +48,84 @@ ul {
   margin-right: 5%;
 }
 
+<<<<<<< HEAD
 ul > li {
+=======
+header > ul > li {
+>>>>>>> 87c538c98c36725917c5290811d715f7114e1bfd
   color: rgb(255, 0, 85);
   display: flex;
   align-items: center;
 }
 
-ul > li > a {
+header > ul > li > a {
   text-decoration: none;
   color: white;
 }
-/*  align-items:center; */
 
-.containerGames {
-  height: 26em;
+/* Game's rules sections */
+
+.btn {
+  border-radius: 16px;
+  font-family: "IM Fell English", serif;
+  cursor: help;
+  font-size: 9.6px;
+  padding: 0px;
+  outline: none;
+  background-color: #000000;
+  border: none; /*intégration*/
+  color: #ffffff;
+  transition: 0.2s;
+  /*ease-out, ou ease-in à rajouter ??*/
 }
+
+.rules {
+  background-image: url("images/regle/Team_404_fond_regles.png");
+  border-radius: 16px;
+  position: absolute; /*à revoir*/
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  color: #ffffff;
+  width: 22em;
+  height: 38em;
+  margin-top: 5em;
+  margin-left: -14em;
+  padding: 2em;
+  line-height: 1.7;
+  visibility: hidden;
+  opacity: 0;
+  transition-duration: 1.4s;
+}
+
+.rules > h2 {
+  text-align: center;
+  font-size: x-large;
+}
+
+.rules > p {
+  font-size: 1.2em;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+.rules.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.btn:hover {
+  background-color: rgb(44, 44, 44);
+}
+
+.btn:focus {
+  outline: none; /* à modifier*/
+}
+  
+/* .btn:active {
+    transform: (0.2); 
+} en conflit */
+
 
 #screenGame {
   display: block;
@@ -65,101 +133,431 @@ ul > li > a {
   background-image: url("/images/background/underwater-fantasy-preview.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 26em;
+  width: 100%;
 }
 
-/********** Logo et nom du jeu **********/
+/********** Logo, nom du jeu et bouton **********/
 
 footer {
   background-color: black;
   --text-color: rgb(200, 198, 198);
-  color: var(--text-color);
-  bottom: 0;
+  color: var(--text-color); 
+  height: 100%;
+  
+
 }
 
-.logo_footer {
+.button-logo-bottom {
   display: flex;
   justify-content: center;
-  height: 20vh;
-  padding-top: 2vh;
+  flex-direction: row;
+  align-items: center;
+  background-color: black;
+  padding-top: 7%;
 }
 
-.game_name_footer {
+.game_name-desktop{
+  display: none;
+}
+
+.logo_picture-desktop{
+  display: none;
+}
+.directional-cross-left{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.directional-cross-right{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+#cross-right {
+  text-align: center;
+  width: 90px;
+  height: 60px;
+  border: none;
+  background-color: black;
+  padding: 0;
+  
+}
+#cross-left {
+  text-align: center;
+  background-color: black;
+  width: 90px;
+  height: 60px;
+  padding: 0;
+  border: none;
+}
+
+
+.logo_picture {
+  height: 16vh;
+} 
+
+.game_name {
   text-align: center;
   font-size: 1em;
-  /*margin-top: 5%;*/
+  height: 5%;
+  margin: 0;
+  padding-top: 5%;
+  background-color: black;
 }
+.game_name > h2 {
+  margin: 0;
+  padding-top: 3%;
+  color: white;
+}
+
 
 /******** Accès aux réseaux sociaux *******/
 
+
 .footer_social_medias {
+  height: 8%;
+}
+
+.footer_social_medias > ul {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
   justify-content: space-around;
-  font-size: 2em;
-  /*margin: 1em 2em;*/
+  text-align: center;
+  list-style-type: none;
+  padding-top: 3%;
+  width: 100%;
+  padding-left: 0;
+  margin-top: 15%
+}
+.footer_social_medias > ul > li {
+  width: 33%;
+  
+  
+  
 }
 
-.fa-discord,
-.fa-twitter,
-.fa-telegram {
-  color: rgb(200, 198, 198);
+.fa-discord
+{
+  color:white; /*couleur d'origine du logo a revoir */
+  width: 33%;
+  font-size: 1.8em;
+}
+.fa-telegram, 
+.fa-twitter {
+  color: white; /*couleur d'origine du logo a revoir */
+  width: 33%;
+  font-size: 1.8em;
 }
 
-.footer-legal {
-  display: flex;
-  font-size: 0.8em; /*responsive*/
-  flex-direction: column;
+.footer-team-404 {
+  display: block;
+  text-align: center;
+  font-size: 0.7em; 
   align-items: center;
-  padding: 3px;
+  padding-top: 5%;
+  
 }
 
-/******** Informations légales ********/
 
-/* @media screen and (min-width: 718px) {
-  .game_name_footer {
-    font-size: 2.2em;
-    margin-top: 2%;
+ 
+
+
+/*
+#game-over-notify {
+    position: fixed;
+    display: none;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    font-size: 1.8rem;
+    color: white;
+    font-weight: 300;
+}
+
+.gameOverContent {
+    display: flex;
+    align-items: center;
+    margin: 50px 120px;
+    width:100%;
+}
+
+ */
+
+/* *************** SUCCESS *************** */
+/* #success-notify {
+    position: fixed;
+    display: none;
+    align-items: center;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    font-size: 1.8rem;
+    color: white;
+    font-weight: 300;
+}
+
+.successContent {
+    text-align: right;
+    margin: 50px 120px;
+    width:100%;
+}
+
+
+ */
+   @media screen and (min-width: 768px) {
+   
+  body{
+    background-image: url("images/background/pirate-5996147(1) 1tablette 1tablette2(1).png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+    
   }
+
+  header {
+    height: 6vh;
+  }
+
+  .gameName > h1 {
+    font-size: 1.7em;
+    text-align: right;
+    padding-right: 5%;
+  }
+
+  header > ul {
+    flex-direction: row;
+    font-size: 0.8em;
+    width: 70vw; 
+  } 
+
+  header > ul > li {
+    font-size: 1.2em;
+  }
+  
+  .mainContent {
+    height: 23em;
+  }
+
+  #screenGame {
+    width: 50%;
+    margin-top: 10%;
+  }
+
+  .button-logo-bottom {
+    padding-top: 2%;
+  }
+
+  #cross-left {
+    width: 150px;
+    height: 120px; 
+  }
+
+  #cross-right {
+    width: 150px;
+    height: 120px;
+  }
+  
+  #left_hand {
+    content: url(images/logo/lefthandtablette.png);
+  }
+
+  #right_hand {
+    content: url(images/logo/Maskgrouprighthandtablette.png);
+  }
+  
+  
+
+  .game_name {
+    font-size: 2.5em;
+    padding-top: 0;
+  }
+
+  .logo_picture {
+    height: 20vh;
+    width: 35vw;
+  } 
+
   .footer_social_medias {
-    font-size: 3em;
+    display: flex;
+    font-size: 2em;
     padding: 4vh;
     margin: 0 4em;
-    display: flex;
+    padding-bottom: 1vh;
+  
+
   }
-  .footer-legal {
+
+  .footer-team-404 { 
+    padding-top: 0;
+    height: 5vh   ;
+  }
+
+  .footer-team-404 > h3 {
+    font-size: 2em;
+    padding-bottom: 4%;
+  }
+
+  
+
+.rules {
+  width: 32em;
+  height: 31em;
+  margin-top: 2.4em;
+  margin-left: -24em;
+  padding: 1em;
+  }
+
+  .btn {
+    font-size: 1.5em;
+  }
+}   
+  
+  @media screen and (min-width: 1024px) {
+
+  body {
+    height: 1000px;
+    background-image: url("images/background/pirate-5996147 1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;  
+  }
+
+  header {
+    height: 8vh;
+  }
+
+  header > ul > li {
+    font-size: 1.5em;
+  }
+
+  .gameName > h1 {
+    font-size: 2em;
+    text-align: center;
+    }
+
+
+  .btn {
+    font-size: 1em;
+  }
+
+  .rules {
+    width: 36.5em;
+    height: 34em;
+    margin-top: 6em;
+    margin-left: -35.6em;
+    padding: 1.85em;
+    
+    }
+
+  .rules>h2 {
+      font-size: xx-large;
+  }
+
+  .rules>p {
+      font-size: 1.4em;
+      margin-bottom: 1.9rem;
+      margin-top: 0;
+    }
+
+  .mainContent {
+    height: 35em;
+  }
+
+   #screenGame {
+    width: initial;
+    margin-top: 5%;
+    border-radius: 10px;
+    
+  } 
+
+  footer {
+    background-color: black;
+    --text-color: rgb(200, 198, 198);
+    color: var(--text-color);
+  }
+  
+  .button-logo-bottom {
+    justify-content: space-around;
+    padding-top: 0;
+  }
+
+
+  .game_name-desktop {
+    display: initial;
+    font-size: 2em;
+  }
+
+  .logo_picture-desktop {
+    display: initial;
+    height: 16vh;
+  }
+
+  .logo_picture {
+    height: 16vh;
+    width: initial;
+  } 
+  .game_name{
+    display: none;
+  }
+
+  .directional-cross-right {
+    display: none;
+  }
+  .directional-cross-left {
+    display: none;
+  }
+
+  /******** Accès aux réseaux sociaux *******/
+
+  .footer_social_team404 {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    font-size: 1rem;
-    margin: 0 5em;
+    padding: 0;
   }
 }
+
 @media screen and (min-width: 1024px) {
   .footer_social_medias {
-    margin: 0 6em;
+    display: flex;
+    justify-content: space-around;
+    width: 40%;    
+    align-items: center;
+    padding-top: 0;
+  }
+
+  .gameName {
+    font-size: 0.5em;
+  }
+
+  .mainContent {
+    width: 40vw;
+    height: 30em;
+  }
+
+  .containerGames {
+    height: 30em;
+  }
+  #screenGame {
+    background-image: url("/images/background/underwater-fantasy-preview.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30em;
+    width: 50%;
+  }
+
+  footer {
+    background-color: black;
+    --text-color: rgb(200, 198, 198);
+    color: var(--text-color);
+  }
+
+  .logo_footer {
+    padding-top: 3em;
   }
 }
-.gameName {
-font-size: 0.5em;
-}
-.mainContent{
-  height: 30em;
-}
-.containerGames {
-  height: 30em;
-}
-#screenGame {
-  background-image: url("/images/background/underwater-fantasy-preview.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 30em;
-}
-footer {
-  background-color: black;
-  --text-color: rgb(200, 198, 198);
-  color: var(--text-color);
-}
-.logo_footer{
-  padding-top: 3em;
-} */
