@@ -416,144 +416,136 @@ footer {
   
   @media screen and (min-width: 1024px) {
 
-  body {
-    height: 1000px;
-    background-image: url("images/background/pirate-5996147 1.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;  
-  }
-
-  header {
-    height: 8vh;
-  }
-
-  header > ul > li {
-    font-size: 1.5em;
-  }
-
-  .gameName > h1 {
-    font-size: 2em;
-    text-align: center;
+    body {
+      height: initial;
+      background-image: url("images/background/pirate-5996147 1-min(1).png");
+      background-repeat: no-repeat;
+      background-size: cover;  
     }
-
-
-  .btn {
-    font-size: 1em;
-  }
-
-  .rules {
-    width: 36.5em;
-    height: 34em;
-    margin-top: 6em;
-    margin-left: -35.6em;
-    padding: 1.85em;
-    
-    }
-
-  .rules>h2 {
-      font-size: xx-large;
-  }
-
-  .rules>p {
-      font-size: 1.4em;
-      margin-bottom: 1.9rem;
-      margin-top: 0;
-    }
-
-  .mainContent {
-    height: 35em;
-  }
-
-   #screenGame {
-    width: initial;
-    margin-top: 5%;
-    border-radius: 10px;
-    
-  } 
-
-  footer {
-    background-color: black;
-    --text-color: rgb(200, 198, 198);
-    color: var(--text-color);
-  }
   
-  .button-logo-bottom {
+    header {
+      height: 8vh;
+    }
+  
+    header > ul > li {
+      font-size: 1.5em;
+    }
+  
+    .gameName > h1 {
+      font-size: 2em;
+      text-align: center;
+      }
+  
+  
+    .btn {
+      font-size: 1em;
+    }
+  
+    .rules {
+      width: 36.5em;
+      height: 34em;
+      margin-top: 6em;
+      margin-left: -35.6em;
+      padding: 1.85em;
+      
+      }
+  
+    .rules>h2 {
+        font-size: xx-large;
+    }
+  
+    .rules>p {
+        font-size: 1.4em;
+        margin-bottom: 1.9rem;
+        margin-top: 0;
+      }
+  
+    .mainContent {
+      height: 32em;
+    }
+  
+     #screenGame {
+      width: initial;
+      margin-top: 5%;
+      border-radius: 10px;
+      
+    } 
+    
+    .button-logo-bottom {
+      justify-content: space-around;
+      padding-top: 0;
+    }
+  
+  
+    .game_name-desktop {
+      display: initial;
+      font-size: 2em;
+    }
+  
+    .logo_picture-desktop {
+      display: initial;
+      height: 16vh;
+    }
+  
+    .logo_picture {
+      height: 16vh;
+      width: initial;
+    } 
+    .game_name{
+      display: none;
+    }
+  
+    .directional-cross-right {
+      display: none;
+    }
+    .directional-cross-left {
+      display: none;
+    }
+  
+    /******** Accès aux réseaux sociaux *******/
+  
+    .footer_social_team404 {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      padding: 0;
+    }
+  
+    .footer_social_medias {
+      display: flex;
+      justify-content: space-around;
+      width: 40%;    
+      align-items: center;
+      padding-top: 0;
+    }
+  
+    .footer_social_medias > ul {
+    width: 100;
     justify-content: space-around;
-    padding-top: 0;
-  }
-
-
-  .game_name-desktop {
-    display: initial;
-    font-size: 2em;
-  }
-
-  .logo_picture-desktop {
-    display: initial;
-    height: 16vh;
-  }
-
-  .logo_picture {
-    height: 16vh;
+    padding-top: 0
+    }
+  
+    .footer_social_medias > ul > li {
     width: initial;
-  } 
-  .game_name{
-    display: none;
-  }
-
-  .directional-cross-right {
-    display: none;
-  }
-  .directional-cross-left {
-    display: none;
-  }
-
-  /******** Accès aux réseaux sociaux *******/
-
-  .footer_social_team404 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 0;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .footer_social_medias {
-    display: flex;
-    justify-content: space-around;
-    width: 40%;    
-    align-items: center;
-    padding-top: 0;
-  }
-
-  .gameName {
-    font-size: 0.5em;
-  }
-
-  .mainContent {
-    width: 40vw;
-    height: 30em;
-  }
-
-  .containerGames {
-    height: 30em;
-  }
-  #screenGame {
-    background-image: url("/images/background/underwater-fantasy-preview.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 30em;
-    width: 50%;
-  }
-
-  footer {
-    background-color: black;
-    --text-color: rgb(200, 198, 198);
-    color: var(--text-color);
-  }
-
-  .logo_footer {
-    padding-top: 3em;
-  }
+    width: 33%;
+    margin-right: 15%;
+    font-size: 1em;
+    }  
+  
+  
+  
+    .footer-team-404 {
+      display: flex;
+      justify-content: center;
+      width: 40%;
+      height: initial;
+      padding-top: 0;
+      margin-top: 0;  
+    }
+  
+    .footer-team-404 > h3 {
+      width: 100%;
+      font-size: 2.5em;
+      text-align: center;
+    }
 }
