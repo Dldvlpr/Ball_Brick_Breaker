@@ -59,22 +59,20 @@ header > ul > li > a {
 /* Game Over pop-up*/
 
 #game-over {
-  position: absolute; 
-  display: flex;
-  justify-content: center;
-  opacity: 1;
-  visibility: visible;
-  margin-left: 5em;
-  margin-top: 2em;
+  opacity: 0;
+  visibility: hidden;
+  position:fixed;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%,-50%);
 }
-
 /* Game's rules sections */
 
 .btn {
     border-radius:16px;
     font-family: "IM Fell English", serif;
     cursor: help;
-    font-size: .6px;
+    font-size: 1em;
     padding: 0px;
     outline: none;
     background-color: #000000;
@@ -329,7 +327,7 @@ footer {
    @media screen and (min-width: 768px) {
    
   body{
-    background-image: url("images/background/pirate-5996147(1) 1tablette 1tablette2(1)-min.png");
+    background-image: url("images/background/fondcarte.jpg");
     background-repeat: no-repeat;
     background-size: cover;
   }
