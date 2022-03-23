@@ -38,14 +38,7 @@ header {
   margin-top: 0.8em;
   text-align: center;
   color: rgb(205, 204, 212);
-<<<<<<< HEAD
   text-shadow: 5px 5px 5px black;
-=======
-  width:70%;
-  height: 1.9em;
-  border-radius: 25px;
-  text-shadow: 2px 2px px black;
->>>>>>> c279fade696048cbb7c10deebf272c237d6771f3
 }
 header > ul {
   list-style-type: none;
@@ -215,22 +208,10 @@ footer {
 .footer_social_medias > ul > li {
   width: 20%;
 }
-<<<<<<< HEAD
 .fa-discord,
 .fa-telegram, 
 .fa-twitter {
   color: white;
-=======
-
-.fa-discord
-{
-  color: rgb(202, 201, 201); /*couleur d'origine du logo a revoir */
-  font-size: 1em;
-}
-.fa-telegram, 
-.fa-twitter {
-  color: rgb(202, 201, 201); /*couleur d'origine du logo a revoir */
->>>>>>> c279fade696048cbb7c10deebf272c237d6771f3
   font-size: 1em;
 }
 

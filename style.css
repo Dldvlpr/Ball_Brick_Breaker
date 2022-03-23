@@ -224,11 +224,7 @@ footer {
   margin: 0;
   padding-top: 3%;
   color: white;
-<<<<<<< HEAD
   
-=======
-  text-shadow: 3px 3px 6px rgb(219, 218, 218);
->>>>>>> c279fade696048cbb7c10deebf272c237d6771f3
 }
 
 
@@ -255,18 +251,7 @@ footer {
   
   
 }
-
-<<<<<<< HEAD
 .fa-discord,
-=======
-.fa-discord
-{
-  color: white; /*couleur d'origine du logo a revoir */
-  width: 33%;
-  font-size: 1.6em;
-  padding-top: 0.8em;
-}
->>>>>>> c279fade696048cbb7c10deebf272c237d6771f3
 .fa-telegram, 
 .fa-twitter {
   color: white; /*couleur d'origine du logo a revoir */
