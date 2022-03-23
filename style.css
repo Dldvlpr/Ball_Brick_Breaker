@@ -256,8 +256,7 @@ footer {
 .fa-twitter {
   color: white; /*couleur d'origine du logo a revoir */
   width: 33%;
-  font-size: 1.6em;
-  margin-top: 0.8em
+  font-size: 1.2em;
 }
 
 .footer-team-404 {
@@ -270,62 +269,12 @@ footer {
   
 }
 
-
- 
-
-
-/*
-#game-over-notify {
-    position: fixed;
-    display: none;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: black;
-    font-size: 1.8rem;
-    color: white;
-    font-weight: 300;
-}
-
-.gameOverContent {
-    display: flex;
-    align-items: center;
-    margin: 50px 120px;
-    width:100%;
-}
-
- */
-
-/* *************** SUCCESS *************** */
-/* #success-notify {
-    position: fixed;
-    display: none;
-    align-items: center;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: black;
-    font-size: 1.8rem;
-    color: white;
-    font-weight: 300;
-}
-
-.successContent {
-    text-align: right;
-    margin: 50px 120px;
-    width:100%;
-}
-
-
- */
    @media screen and (min-width: 768px) {
    
   body{
-    background-image: url("images/background/fondcarte.jpg");
+    background-image: url("images/test/carte.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: content;
   }
 
   header {
@@ -442,9 +391,9 @@ footer {
 
   body {
     height: initial;
-    background-image: url("images/background/pirate-5996147 1-min(1).png");
+    background-image: url("images/test/tableaux-sur-toile-carte-au-tresor\ 1.png");
     background-repeat: no-repeat;
-    background-size: cover;  
+    background-size: content;  
   }
 
   header {

@@ -292,6 +292,7 @@ function startGame()
         startGame();
         alert("vous avez perdu une vie");        
     }
+    
   }
 /*dtection colision mur et paddle */
 function colisionDetectionWall()
