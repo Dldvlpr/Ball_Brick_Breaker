@@ -66,9 +66,7 @@ header > ul > li > a {
   top: 25%;
   transform: translate(-50%,-50%);
 }
-
 /* Game's rules sections */
-
 .btn {
     border-radius:16px;
     font-family: "IM Fell English", serif;
@@ -81,12 +79,11 @@ header > ul > li > a {
     color: #ffffff;
     transition: .2s ;
     /*ease-out, ou ease-in à rajouter ??*/
-  }
+}
   .close-btn {
     font-size: 1em;
     width: 80%;
-    margin-left: 2.6em;
-    
+    margin-left: 2.6em;    
   } 
   
   .rules {
@@ -134,13 +131,6 @@ header > ul > li > a {
     outline: none; /* à modifier*/
 }
 
-
-  
-/* .btn:active {
-    transform: (0.2); 
-} en conflit */
-
-
 #screenGame {
   display: block;
   margin: 0 auto;
@@ -148,11 +138,8 @@ header > ul > li > a {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  
 }
-
 /********** Logo, nom du jeu et bouton **********/
-
 footer {
   z-index: -1;
   background-color: black;
@@ -162,9 +149,6 @@ footer {
   position: fixed;
   left: 0;
   right: 0;
-  
-  
-
 }
 
 .button-logo-bottom {
@@ -193,7 +177,6 @@ footer {
   display: flex;
   width: 100%;
   justify-content: center;
-  
 }
 
 #cross-right {
@@ -203,7 +186,6 @@ footer {
   border: none;
   background-color: black;
   padding: 0;
-  
 }
 #cross-left {
   text-align: center;
@@ -225,23 +207,16 @@ footer {
   height: 5%;
   margin: 0;
   padding-top: 5%;
-  background-color: black;
-
-  
+  background-color: black; 
 }
 .game_name > h2 {
   margin: 0;
   padding-top: 3%;
   color: white;
 }
-
-
 /******** Accès aux réseaux sociaux *******/
-
-
 .footer_social_medias {
   height: 3%;
-  
 }
 
 .footer_social_medias > ul {
@@ -255,9 +230,6 @@ footer {
 }
 .footer_social_medias > ul > li {
   width: 33%;
-  
-  
-  
 }
 
 .fa-discord,
@@ -274,67 +246,14 @@ footer {
   font-size: 0.7em; 
   align-items: center;
   padding-top: 5%;
-  
 }
 
-
- 
-
-
-/*
-#game-over-notify {
-    position: fixed;
-    display: none;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: black;
-    font-size: 1.8rem;
-    color: white;
-    font-weight: 300;
-}
-
-.gameOverContent {
-    display: flex;
-    align-items: center;
-    margin: 50px 120px;
-    width:100%;
-}
-
- */
-
-/* *************** SUCCESS *************** */
-/* #success-notify {
-    position: fixed;
-    display: none;
-    align-items: center;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: black;
-    font-size: 1.8rem;
-    color: white;
-    font-weight: 300;
-}
-
-.successContent {
-    text-align: right;
-    margin: 50px 120px;
-    width:100%;
-}
-
-
- */
    @media screen and (min-width: 768px) {
    
   body{
     background-image: url("images/background/37182(1)(1).jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    
-    
   }
 
   header {
@@ -364,7 +283,6 @@ footer {
   #screenGame {
     width: 55%;
     margin-top: 3%;
-    
   }
 
   .button-logo-bottom {
@@ -407,8 +325,6 @@ footer {
     padding: 4vh;
     margin: 0 4em;
     padding-bottom: 1vh;
-  
-
   }
 
   .footer-team-404 { 
@@ -435,13 +351,13 @@ footer {
     font-size: 15.36px;
   }
 
-}  
+ 
 .close-btn {
   font-size: 1.4em;
   width: 80%;
   margin-left: 2.8em;
 } 
-  
+}  
   @media screen and (min-width: 1024px) {
 
   body {
@@ -479,9 +395,8 @@ footer {
     height: 34em;
     margin-top: 6em;
     margin-left: -35.6em;
-    padding: 1.85em;
-    
-    }
+    padding: 1.85em;  
+  }
 
   .rules>h2 {
       font-size: xx-large;
@@ -491,7 +406,7 @@ footer {
       font-size: 1.4em;
       margin-bottom: 1.9rem;
       margin-top: 0;
-    }
+  }
 
   .mainContent {
     height: 32em;
@@ -500,8 +415,7 @@ footer {
    #screenGame {
     width: initial;
     margin-top: 5%;
-    border-radius: 10px;
-    
+    border-radius: 10px;  
   } 
   
   .button-logo-bottom {
@@ -531,6 +445,7 @@ footer {
   .directional-cross-right {
     display: none;
   }
+
   .directional-cross-left {
     display: none;
   }
@@ -562,10 +477,7 @@ footer {
   width: initial;
   width: 33%;
   font-size: 1em;
-
   }  
-
-
 
   .footer-team-404 {
     display: flex;
@@ -581,5 +493,4 @@ footer {
     font-size: 2.5em;
     text-align: left;
   } 
-
 } 
