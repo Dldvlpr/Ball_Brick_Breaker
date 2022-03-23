@@ -136,6 +136,7 @@ header > ul > li > a {
 /********** Logo, nom du jeu et bouton **********/
 
 footer {
+  z-index: -1;
   background-color: black;
   --text-color: rgb(200, 198, 198);
   color: var(--text-color); 
@@ -338,6 +339,12 @@ footer {
 
   header > ul > li {
     font-size: 1.2em;
+  }
+  .close-btn {
+    font-size: 1.4em;
+    width: 80%;
+    margin-left: 2.8em;
+
   }
   
   .mainContent {
