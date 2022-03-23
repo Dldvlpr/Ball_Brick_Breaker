@@ -66,13 +66,14 @@ header > ul > li > a {
   top: 25%;
   transform: translate(-50%,-50%);
 }
+
 /* Game's rules sections */
 
 .btn {
     border-radius:16px;
     font-family: "IM Fell English", serif;
     cursor: help;
-    font-size: 1em;
+    font-size: 9.6px;
     padding: 0px;
     outline: none;
     background-color: #000000;
@@ -81,6 +82,12 @@ header > ul > li > a {
     transition: .2s ;
     /*ease-out, ou ease-in à rajouter ??*/
   }
+  .close-btn {
+    font-size: 1em;
+    width: 80%;
+    margin-left: 2.6em;
+    
+  } 
   
   .rules {
     background-image: url("images/regle/Team_404_fond_regles.png");
@@ -126,6 +133,8 @@ header > ul > li > a {
 .btn:focus{
     outline: none; /* à modifier*/
 }
+
+
   
 /* .btn:active {
     transform: (0.2); 
@@ -224,7 +233,6 @@ footer {
   margin: 0;
   padding-top: 3%;
   color: white;
-  
 }
 
 
@@ -251,13 +259,13 @@ footer {
   
   
 }
+
 .fa-discord,
 .fa-telegram, 
 .fa-twitter {
   color: white; /*couleur d'origine du logo a revoir */
   width: 33%;
-  font-size: 1.6em;
-  margin-top: 0.8em
+  font-size: 1.2em;
 }
 
 .footer-team-404 {
@@ -266,7 +274,6 @@ footer {
   font-size: 0.7em; 
   align-items: center;
   padding-top: 5%;
-  text-shadow: 4px 4px 15px, -4px -4px 15px white;
   
 }
 
@@ -323,9 +330,11 @@ footer {
    @media screen and (min-width: 768px) {
    
   body{
-    background-image: url("images/background/fondcarte.jpg");
+    background-image: url("images/background/pirate-5996147(1) 1tablette 1tablette2(1)-min.png");
     background-repeat: no-repeat;
     background-size: cover;
+    
+    
   }
 
   header {
@@ -347,20 +356,15 @@ footer {
   header > ul > li {
     font-size: 1.2em;
   }
-  .close-btn {
-    font-size: 1.4em;
-    width: 80%;
-    margin-left: 2.8em;
-
-  }
   
   .mainContent {
     height: 23em;
   }
 
   #screenGame {
-    width: 50%;
-    margin-top: 10%;
+    width: 62%;
+    margin-top: 3%;
+    
   }
 
   .button-logo-bottom {
@@ -431,18 +435,17 @@ footer {
     font-size: 15.36px;
   }
 
-    .close-btn {
-    font-size: 1.4em;
-    width: 80%;
-    margin-left: 2.8em;
-  }
-}   
+}  
+.close-btn {
+  font-size: 1.4em;
+  width: 80%;
+  margin-left: 2.8em;
+} 
   
   @media screen and (min-width: 1024px) {
 
   body {
-    height: initial;
-    background-image: url("images/background/pirate-5996147 1-min(1).png");
+    background-image: url("images/background/37182 1(3).png");
     background-repeat: no-repeat;
     background-size: cover;  
   }
@@ -464,6 +467,12 @@ footer {
   .btn {
     font-size: 1em;
   }
+
+  .close-btn {
+    font-size: 1.4em;
+    width: 80%;
+    margin-left: 2.8em;
+  } 
 
   .rules {
     width: 36.5em;
@@ -492,13 +501,8 @@ footer {
     width: initial;
     margin-top: 5%;
     border-radius: 10px;
+    
   } 
-
-  .close-btn {
-    font-size: 1.4em;
-    width: 80%;
-    margin-left: 2.8em;
-  }
   
   .button-logo-bottom {
     justify-content: space-around;
@@ -509,7 +513,6 @@ footer {
   .game_name-desktop {
     display: initial;
     font-size: 2em;
-    
   }
 
   .logo_picture-desktop {
@@ -532,46 +535,42 @@ footer {
     display: none;
   }
 
-    /******** Accès aux réseaux sociaux *******/
+  /******** Accès aux réseaux sociaux *******/
 
   .footer_social_team404 {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     padding: 0;
   }
 
   .footer_social_medias {
     display: flex;
-    justify-content: space-around;
-    width: 40%;    
+    width: 100%;    
     align-items: center;
     padding-top: 0;
+    padding-right: 0;
+    margin-right: 0;
+    margin-left: 31%;
   }
 
   .footer_social_medias > ul {
-  width: 100;
-  justify-content: space-around;
-  padding-top: 0px;
+  width: 70%;
+  padding-top: 0
   }
 
   .footer_social_medias > ul > li {
   width: initial;
   width: 33%;
-  margin-right: 15%;
   font-size: 1em;
+
   }  
 
-  footer {
-    background-color: black;
-    --text-color: rgb(200, 198, 198);
-    color: var(--text-color);
-  }
+
 
   .footer-team-404 {
     display: flex;
     justify-content: center;
-    width: 40%;
+    width: 35%;
     height: initial;
     padding-top: 0;
     margin-top: 0;  
@@ -580,8 +579,7 @@ footer {
   .footer-team-404 > h3 {
     width: 100%;
     font-size: 2.5em;
-    text-align: center;
-    text-shadow: initial;
+    text-align: left;
   } 
 
 } 

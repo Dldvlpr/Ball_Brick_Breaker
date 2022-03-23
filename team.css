@@ -10,14 +10,16 @@
 }
 
 body {
-  background: rgb(130, 136, 167);
+  background-image: url(images/background/fondcarte.jpg);
   font-family: "IM Fell English", serif;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 header {
   position: sticky;
   height: 3rem;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   display: flex;
   justify-content: space-between;
 }
