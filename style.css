@@ -152,9 +152,6 @@ footer {
   position: fixed;
   left: 0;
   right: 0;
-  
-  
-
 }
 
 .button-logo-bottom {
@@ -561,12 +558,6 @@ footer {
   margin-right: 15%;
   font-size: 1em;
   }  
-
-  footer {
-    background-color: black;
-    --text-color: rgb(200, 198, 198);
-    color: var(--text-color);
-  }
 
   .footer-team-404 {
     display: flex;
