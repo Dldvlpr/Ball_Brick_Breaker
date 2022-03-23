@@ -255,13 +255,15 @@ footer {
 {
   color: white; /*couleur d'origine du logo a revoir */
   width: 33%;
-  font-size: 1.2em;
+  font-size: 1.6em;
+  padding-top: 0.8em;
 }
 .fa-telegram, 
 .fa-twitter {
   color: white; /*couleur d'origine du logo a revoir */
   width: 33%;
-  font-size: 1.2em;
+  font-size: 1.6em;
+  margin-top: 0.8em
 }
 
 .footer-team-404 {
@@ -429,7 +431,7 @@ footer {
     font-size: 15.36px;
   }
 
-  .close-btn {
+    .close-btn {
     font-size: 1.4em;
     width: 80%;
     margin-left: 2.8em;
@@ -457,7 +459,6 @@ footer {
     font-size: 2em;
     text-align: left;
     }
-
 
 
   .btn {
@@ -551,7 +552,7 @@ footer {
   .footer_social_medias > ul {
   width: 100;
   justify-content: space-around;
-  padding-top: 0
+  padding-top: 0px;
   }
 
   .footer_social_medias > ul > li {
@@ -560,8 +561,6 @@ footer {
   margin-right: 15%;
   font-size: 1em;
   }  
-
-
 
   footer {
     background-color: black;

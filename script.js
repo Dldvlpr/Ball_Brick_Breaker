@@ -320,6 +320,7 @@ function colisionDetectionWall()
 
 
 const youLose = document.getElementById('game-over');
+/*const youWin = document.getElementByIde('you-win')*/
 
 /* ne pas toucher, faire également le message de victoire*/ 
 function gameOver()
