@@ -30,18 +30,15 @@ header {
 .logoPrincipal{
   width: 30%;
   text-align: center;
+  margin-top: 0.2em;
 }
 
 #ourTeam {
   font-size: 2em;
   margin-top: 0.8em;
-  padding-top: 9px;
   text-align: center;
   color: rgb(205, 204, 212);
-  width:70%;
-  height: 1.9em;
-  border-radius: 25px;
-  text-shadow: 2px 2px px black;
+  text-shadow: 5px 5px 5px black;
 }
 header > ul {
   list-style-type: none;
@@ -211,18 +208,41 @@ footer {
 .footer_social_medias > ul > li {
   width: 20%;
 }
-
-.fa-discord
-{
-  color: rgb(202, 201, 201); /*couleur d'origine du logo a revoir */
-  font-size: 1em;
-}
+.fa-discord,
 .fa-telegram, 
 .fa-twitter {
-  color: rgb(202, 201, 201); /*couleur d'origine du logo a revoir */
+  color: white;
   font-size: 1em;
 }
 
+@media screen and (min-width: 768px){
+  header {
+    height: 5rem;
+  }
+  .logoPrincipal {
+    margin-top: 0.5em;
+  }
+  .logo_picture {
+    height: 9vh;
+  }
 
+  .logo-bottom {
+    padding-top: 2%;
+  }
+
+  .footer_social_medias {
+    padding-bottom: 2%;
+    padding-top: 2%;
+  }
+  header > ul {
+    font-size: 1.5em;
+  }
+  .team_404 {
+    font-size: 1.5em;
+  }
+  .logo_picture-desktop {
+    height: 9vh;
+  }
+}
 
 

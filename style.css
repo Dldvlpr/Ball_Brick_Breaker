@@ -145,6 +145,7 @@ header > ul > li > a {
 /********** Logo, nom du jeu et bouton **********/
 
 footer {
+  z-index: -1;
   background-color: black;
   --text-color: rgb(200, 198, 198);
   color: var(--text-color); 
@@ -220,7 +221,7 @@ footer {
   margin: 0;
   padding-top: 3%;
   color: white;
-  text-shadow: 3px 3px 6px rgb(219, 218, 218);
+  
 }
 
 
@@ -248,13 +249,7 @@ footer {
   
 }
 
-.fa-discord
-{
-  color: white; /*couleur d'origine du logo a revoir */
-  width: 33%;
-  font-size: 1.6em;
-  padding-top: 0.8em;
-}
+.fa-discord,
 .fa-telegram, 
 .fa-twitter {
   color: white; /*couleur d'origine du logo a revoir */
@@ -506,7 +501,6 @@ footer {
   .game_name-desktop {
     display: initial;
     font-size: 2em;
-    text-shadow: 1px 1px 20px rgb(201, 198, 198);
   }
 
   .logo_picture-desktop {
