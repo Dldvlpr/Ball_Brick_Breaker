@@ -67,6 +67,11 @@ header > ul > li > a {
   transform: translate(-50%,-50%);
 }
 
+#you-lose{
+  width: 180px;
+  height: 180px;
+}
+
 /* Game's rules sections */
 
 .btn {
@@ -82,11 +87,11 @@ header > ul > li > a {
     transition: .2s ;
     /*ease-out, ou ease-in à rajouter ??*/
   }
+
   .close-btn {
     font-size: 1em;
     width: 80%;
-    margin-left: 2.6em;
-    
+    margin-left: 1em; 
   } 
   
   .rules {
@@ -125,6 +130,13 @@ header > ul > li > a {
   opacity: 1; 
 }
 
+#rules-text-mobile{
+  visibility: visible;
+}
+
+#rules-text-desktop {
+  display: none;
+}
 
 .btn:hover {
     background-color: rgb(44, 44, 44);
@@ -391,6 +403,18 @@ footer {
   width: 80%;
   margin-left: 2.8em;
 } 
+
+#game-over {
+  position:fixed;
+  left: 50%;
+  top: 28%;
+
+}
+
+#you-lose{
+  width: 280px;
+  height: 280px;
+}
   
   @media screen and (min-width: 1024px) {
 
@@ -418,6 +442,14 @@ footer {
     font-size: 1em;
   }
 
+  #rules-text-mobile{
+    display: none;
+  }
+  
+  #rules-text-desktop{
+    display: contents;
+  }
+
   .close-btn {
     font-size: 1.4em;
     width: 80%;
@@ -431,7 +463,7 @@ footer {
     margin-left: -35.6em;
     padding: 1.85em;
     
-    }
+  }
 
   .rules>h2 {
       font-size: xx-large;
@@ -515,8 +547,6 @@ footer {
 
   }  
 
-
-
   .footer-team-404 {
     display: flex;
     justify-content: center;
@@ -531,5 +561,17 @@ footer {
     font-size: 2.5em;
     text-align: left;
   } 
+
+  #game-over {
+    position:fixed;
+    left: 50%;
+    top: 37%;
+
+  }
+
+  #you-lose{
+    width: 300px;
+    height: 300px;
+  }
 
 } 
