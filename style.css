@@ -66,6 +66,12 @@ header > ul > li > a {
   top: 25%;
   transform: translate(-50%,-50%);
 }
+
+#you-lose{
+  width: 150px;
+  height: 150px;
+}
+
 /* Game's rules sections */
 .btn {
     border-radius:16px;
@@ -122,6 +128,13 @@ header > ul > li > a {
   opacity: 1; 
 }
 
+#rules-text-mobile{
+  visibility: visible;
+}
+
+#rules-text-desktop {
+  display: none;
+}
 
 .btn:hover {
     background-color: rgb(44, 44, 44);
@@ -351,19 +364,31 @@ footer {
     font-size: 15.36px;
   }
 
- 
 .close-btn {
   font-size: 1.4em;
   width: 80%;
   margin-left: 2.8em;
 } 
-}  
+
+#game-over {
+  position:fixed;
+  left: 50%;
+  top: 24%;
+}
+
+#you-lose{
+  width: 280px;
+  height: 280px;
+}
+
+}
+  
   @media screen and (min-width: 1024px) {
 
   body {
     background-image: url("images/background/37182(1).jpg");
     background-repeat: no-repeat;
-    background-size: cover;  
+    background-size: content;  
   }
 
   header {
@@ -382,6 +407,14 @@ footer {
 
   .btn {
     font-size: 1em;
+  }
+
+  #rules-text-mobile{
+    display: none;
+  }
+  
+  #rules-text-desktop{
+    display: contents;
   }
 
   .close-btn {
@@ -493,4 +526,16 @@ footer {
     font-size: 2.5em;
     text-align: left;
   } 
+
+  #game-over {
+    position:fixed;
+    left: 50%;
+    top: 38%;
+  }
+
+  #you-lose{
+    width: 350px;
+    height: 350px;
+  }
+
 } 

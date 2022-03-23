@@ -288,10 +288,16 @@ function startGame()
         paddleX = (canvas.width-paddleWidth)/2;
         dx = 2;
         dy = -3;
+        if (lives >= 1){
         LIFE_LOST.play();
         startGame();
-        alert("vous avez perdu une vie");        
+        }
+        else {
+            gameOver();
+        }
+        /* alert("vous avez perdu une vie"); */        
     }
+    
   }
 /*dtection colision mur et paddle */
 function colisionDetectionWall()
@@ -325,7 +331,7 @@ const youLose = document.getElementById('game-over');
 /* ne pas toucher, faire également le message de victoire*/ 
 function gameOver()
 {
-    if (lives === 0)
+    if (lives === 0 )
     {   
         GAME_OVER.play()
         youLose.style.visibility = 'visible';
@@ -355,5 +361,5 @@ function draw()
 }
 
 /* appel fonction draw intervalle regulier */
- const interval = setInterval(draw, 14);
+ const interval = setInterval(draw, 16);
  
