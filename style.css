@@ -56,14 +56,23 @@ header > ul > li > a {
   text-decoration: none;
   color: white;
 }
+/* Game Over pop-up*/
 
+#game-over {
+  opacity: 0;
+  visibility: hidden;
+  position:fixed;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%,-50%);
+}
 /* Game's rules sections */
 
 .btn {
     border-radius:16px;
     font-family: "IM Fell English", serif;
     cursor: help;
-    font-size: 9.6px;
+    font-size: 1em;
     padding: 0px;
     outline: none;
     background-color: #000000;
@@ -215,7 +224,11 @@ footer {
   margin: 0;
   padding-top: 3%;
   color: white;
+<<<<<<< HEAD
   
+=======
+  text-shadow: 3px 3px 6px rgb(219, 218, 218);
+>>>>>>> c279fade696048cbb7c10deebf272c237d6771f3
 }
 
 
@@ -243,12 +256,23 @@ footer {
   
 }
 
+<<<<<<< HEAD
 .fa-discord,
+=======
+.fa-discord
+{
+  color: white; /*couleur d'origine du logo a revoir */
+  width: 33%;
+  font-size: 1.6em;
+  padding-top: 0.8em;
+}
+>>>>>>> c279fade696048cbb7c10deebf272c237d6771f3
 .fa-telegram, 
 .fa-twitter {
   color: white; /*couleur d'origine du logo a revoir */
   width: 33%;
-  font-size: 1.2em;
+  font-size: 1.6em;
+  margin-top: 0.8em
 }
 
 .footer-team-404 {
@@ -314,11 +338,9 @@ footer {
    @media screen and (min-width: 768px) {
    
   body{
-    background-image: url("images/background/pirate-5996147(1) 1tablette 1tablette2(1)-min.png");
+    background-image: url("images/background/fondcarte.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    
-    
   }
 
   header {
@@ -327,7 +349,7 @@ footer {
 
   .gameName > h1 {
     font-size: 1.7em;
-    text-align: right;
+    text-align: left;
     padding-right: 5%;
   }
 
@@ -421,7 +443,13 @@ footer {
   }
 
   .btn {
-    font-size: 1.5em;
+    font-size: 15.36px;
+  }
+
+    .close-btn {
+    font-size: 1.4em;
+    width: 80%;
+    margin-left: 2.8em;
   }
 }   
   
@@ -444,7 +472,7 @@ footer {
 
   .gameName > h1 {
     font-size: 2em;
-    text-align: center;
+    text-align: left;
     }
 
 
@@ -479,8 +507,13 @@ footer {
     width: initial;
     margin-top: 5%;
     border-radius: 10px;
-    
   } 
+
+  .close-btn {
+    font-size: 1.4em;
+    width: 80%;
+    margin-left: 2.8em;
+  }
   
   .button-logo-bottom {
     justify-content: space-around;
@@ -491,7 +524,11 @@ footer {
   .game_name-desktop {
     display: initial;
     font-size: 2em;
+<<<<<<< HEAD
     
+=======
+    text-shadow: 1px 1px 20px rgb(201, 198, 198);
+>>>>>>> c279fade696048cbb7c10deebf272c237d6771f3
   }
 
   .logo_picture-desktop {
@@ -514,7 +551,7 @@ footer {
     display: none;
   }
 
-  /******** Accès aux réseaux sociaux *******/
+    /******** Accès aux réseaux sociaux *******/
 
   .footer_social_team404 {
     display: flex;
@@ -534,7 +571,7 @@ footer {
   .footer_social_medias > ul {
   width: 100;
   justify-content: space-around;
-  padding-top: 0
+  padding-top: 0px;
   }
 
   .footer_social_medias > ul > li {
@@ -544,7 +581,11 @@ footer {
   font-size: 1em;
   }  
 
-
+  footer {
+    background-color: black;
+    --text-color: rgb(200, 198, 198);
+    color: var(--text-color);
+  }
 
   .footer-team-404 {
     display: flex;

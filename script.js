@@ -80,6 +80,7 @@ rightButton.addEventListener("mouseup", HandlerMouseUp, false);
 {
     rules.classList.remove('show');
 });
+
 /*detection appui touche/bouton */
 function keyDownHandler(events) 
 {
@@ -316,17 +317,26 @@ function colisionDetectionWall()
         }
     }
 }
-/*pop up game over */
+
+
+const youLose = document.getElementById('game-over');
+/*const youWin = document.getElementByIde('you-win')*/
+
+/* ne pas toucher, faire également le message de victoire*/ 
 function gameOver()
 {
     if (lives === 0)
     {   
-        GAME_OVER.play();
-        alert("GAME OVER");
-        document.location.reload();
+        GAME_OVER.play()
+        youLose.style.visibility = 'visible';
+        youLose.style.opacity = '1';
+        youLose.style.transitionDuration = '2s';
         clearInterval(interval);
-    }  
+        window.setTimeout(function(){location.reload()}, 2600); 
+    }
 }
+
+
 /*appel de toutes les fonctions */
 function draw()
 {
