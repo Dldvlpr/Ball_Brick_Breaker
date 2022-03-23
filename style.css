@@ -68,8 +68,8 @@ header > ul > li > a {
 }
 
 #you-lose{
-  width: 180px;
-  height: 180px;
+  width: 150px;
+  height: 150px;
 }
 
 /* Game's rules sections */
@@ -396,8 +396,7 @@ footer {
   .btn {
     font-size: 15.36px;
   }
-
-}  
+  
 .close-btn {
   font-size: 1.4em;
   width: 80%;
@@ -407,13 +406,14 @@ footer {
 #game-over {
   position:fixed;
   left: 50%;
-  top: 28%;
-
+  top: 24%;
 }
 
 #you-lose{
   width: 280px;
   height: 280px;
+}
+
 }
   
   @media screen and (min-width: 1024px) {
@@ -565,8 +565,7 @@ footer {
   #game-over {
     position:fixed;
     left: 50%;
-    top: 37%;
-
+    top: 48%;
   }
 
   #you-lose{
