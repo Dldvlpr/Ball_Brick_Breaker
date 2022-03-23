@@ -330,7 +330,7 @@ footer {
    @media screen and (min-width: 768px) {
    
   body{
-    background-image: url("images/background/pirate-5996147(1) 1tablette 1tablette2(1)-min.png");
+    background-image: url("images/background/37182(1)(1).jpg");
     background-repeat: no-repeat;
     background-size: cover;
     
@@ -362,7 +362,7 @@ footer {
   }
 
   #screenGame {
-    width: 62%;
+    width: 55%;
     margin-top: 3%;
     
   }
@@ -445,7 +445,7 @@ footer {
   @media screen and (min-width: 1024px) {
 
   body {
-    background-image: url("images/background/37182 1(3).png");
+    background-image: url("images/background/37182(1).jpg");
     background-repeat: no-repeat;
     background-size: cover;  
   }
