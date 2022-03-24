@@ -1,470 +1,348 @@
-@import url("https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap') ;
 body {
-  font-size: 16px;
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-family: "IM Fell English", serif;
-  background: black;
+font-size : 16px;
+box-sizing : border-box;
+padding : 0;
+margin : 0;
+font-family : "IM Fell English", serif;
+background : black;
 }
-
 header {
-  position: sticky;
-  height: 3rem;
-  background-color: black;
-  display: flex;
+position : sticky;
+height : 3rem;
+background-color : black;
+display : flex;
 }
-
 .logo-header {
-  height: 90%;
-  width: auto;
+height : 90%;
+width : auto;
 }
-.logoPrincipal{
-  width: 20vw;
+.logoPrincipal {
+width : 20vw;
 }
-
 .gameName {
-  color: white;
-  display: flex;
-  align-items: center;
-  width: 100vw;
-  justify-content: space-between;
+color : white;
+display : flex;
+align-items : center;
+width : 100vw;
+justify-content : space-between;
 }
-
 .gameName h1 {
-  font-size: 0.8em;
-  text-align: center;
-  width: 100%; 
+font-size : 0.8em;
+text-align : center;
+width : 100%;
 }
-
 header > ul {
-  list-style-type: none;
-  display: flex;
-  justify-content: space-between;
-  width: 50em;
-  font-size: 0.6em;
-  margin-right: 5%;
+list-style-type : none;
+display : flex;
+justify-content : space-between;
+width : 50em;
+font-size : 0.6em;
+margin-right : 5%;
 }
-
 header > ul > li {
-  color: rgb(255, 0, 85);
-  display: flex;
-  align-items: center;
+color : rgb(255, 0, 85);
+display : flex;
+align-items : center;
 }
-
 header > ul > li > a {
-  text-decoration: none;
-  color: white;
+text-decoration : none;
+color : white;
 }
-
-/* Game's rules sections */
-
 .btn {
-    border-radius:16px;
-    font-family: "IM Fell English", serif;
-    cursor: help;
-    font-size: 9.6px;
-    padding: 0px;
-    outline: none;
-    background-color: #000000;
-    border: none; /*intégration*/
-    color: #ffffff;
-    transition: .2s ;
-    /*ease-out, ou ease-in à rajouter ??*/
-  }
-  
-  .rules {
-    background-image: url("images/regle/Team_404_fond_regles.png");
-    border-radius: 16px;
-    position: absolute; /*à revoir*/
-    display: flex;
-    justify-content: center;
-    flex-flow: column;
-    color: #ffffff;
-    width: 22em;
-    height: 38em;
-    margin-top: 5em;
-    margin-left: -14em;
-    padding: 2em;
-    line-height: 1.7;
-    visibility: hidden;
-    opacity: 0;
-    transition-duration: 1.4s;
+border-radius : 16px;
+font-family : "IM Fell English", serif;
+cursor : help;
+font-size : 9.6px;
+padding : 0;
+outline : none;
+background-color : #000000;
+border : none;
+color : #ffffff;
+transition : 0.2s;
 }
-  
-.rules>h2 {
-    text-align: center;
-    font-size: x-large;
-}
-
-.rules>p {
-    font-size: 1.2em;
-    margin-bottom: 0.5rem;
-    margin-top: 0;
-}
-
-
-.rules.show {
-  visibility: visible;
-  opacity: 1; 
-}
-
-
-.btn:hover {
-    background-color: rgb(44, 44, 44);
-}
-  
-.btn:focus{
-    outline: none; /* à modifier*/
-}
-
-form {
-    margin: 10px auto;
-    width: 320px;
-    padding: 1em;
-    border: 1px solid #CCC;
-    border-radius: 1em;
-    background: url("images/Team/fond.logo.png") no-repeat;
-  }
-  
-  form div {
-      text-align: center;
-    margin-top: 5px;
-  }
-  
-  label {
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-    color: white;
-  }
-
-  input{
-      height: 1.5em;
-  }
-  
-  input, textarea {
-
-    width: 300px;  
-    border: 1px solid #999;
-  }
-  
-  input:focus, textarea:focus {
-    border-color: #000;
-  }
-  
-  textarea {
-    vertical-align: top;
-      height: 10em;
-  }
-  
-.button {
-text-align: center;
-}
-
- button {
-background: #0066A2;
-color: white;
-border-style: outset;
-border-color: #0066A2;
-height: 50px;
-width: 100px;
-border-radius: 1em;
-text-shadow:none;
-}
- 
-  
-  footer {
-  background-color: black;
-  --text-color: rgb(200, 198, 198);
-  color: var(--text-color); 
-  height: 100%;
-  position: fixed;
-  left: 0;
-  right: 0;
-}
-
-.button-logo-bottom {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  background-color: black;
-  padding-top: 7%;
-}
-
-.game_name-desktop{
-  display: none;
-}
-
-.logo_picture-desktop{
-  display: none;
-}
-
-.logo_picture {
-  height: 16vh;
-} 
-
-.game_name {
-  text-align: center;
-  font-size: 1em;
-  height: 5%;
-  margin: 0;
-  padding-top: 5%;
-  background-color: black;
-
-  
-}
-.game_name > h2 {
-  margin: 0;
-  padding-top: 3%;
-  color: white;
-}
-
-
-.footer-team-404 {
-  display: block;
-  text-align: center;
-  font-size: 0.7em; 
-  align-items: center;
-  padding-top: 5%;
-  color: white
-}
-
-   @media screen and (min-width: 768px) {
-   
-  body{
-    background-image: url("images/background/37182(1).jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-    
-  }
-
-  header {
-    height: 6vh;
-  }
-
-  .gameName > h1 {
-    font-size: 1.7em;
-    text-align: right;
-    padding-right: 5%;
-  }
-
-  header > ul {
-    flex-direction: row;
-    font-size: 0.8em;
-    width: 70vw; 
-  } 
-
-  header > ul > li {
-    font-size: 1.2em;
-  }
-  
-  .mainContent {
-    height: 23em;
-  }
-
-  #screenGame {
-    width: 50%;
-    margin-top: 10%;
-  }
-
-  .button-logo-bottom {
-    padding-top: 2%;
-  }
-
-  #cross-left {
-    width: 150px;
-    height: 120px; 
-  }
-
-  #cross-right {
-    width: 150px;
-    height: 120px;
-  }
-  
-  #left_hand {
-    content: url(images/logo/lefthandtablette.png);
-  }
-
-  #right_hand {
-    content: url(images/logo/Maskgrouprighthandtablette.png);
-  }
-  
-  
-
-  .game_name {
-    font-size: 2.5em;
-    padding-top: 0;
-  }
-
-  .logo_picture {
-    height: 20vh;
-    width: 35vw;
-  } 
-
-  .footer_social_medias {
-    display: flex;
-    font-size: 2em;
-    padding: 4vh;
-    margin: 0 4em;
-    padding-bottom: 1vh;
-  
-
-  }
-
-  .footer-team-404 { 
-    padding-top: 0;
-    height: 5vh   ;
-  }
-
-  .footer-team-404 > h3 {
-    font-size: 2em;
-    padding-bottom: 4%;
-  }
-
-  
-
 .rules {
-  width: 32em;
-  height: 31em;
-  margin-top: 2.4em;
-  margin-left: -24em;
-  padding: 1em;
-  }
+background-image : url("images/regle/Team_404_fond_regles.png");
+border-radius : 16px;
+position : absolute;
+display : flex;
+justify-content : center;
+flex-flow : column;
+color : #ffffff;
+width : 22em;
+height : 38em;
+margin-top : 5em;
+margin-left : -14em;
+padding : 2em;
+line-height : 1.7;
+visibility : hidden;
+opacity : 0;
+transition-duration : 1.4s;
+}
+.rules > h2 {
+text-align : center;
+font-size : x-large;
+}
+.rules > p {
+font-size : 1.2em;
+margin-bottom : 0.5rem;
+margin-top : 0;
+}
+.rules.show {
+visibility : visible;
+opacity : 1;
+}
+.btn:hover {
+background-color : rgb(44, 44, 44);
+}
+.btn:focus {
+outline : none;
+}
+form {
+margin : 10px auto;
+width : 320px;
+padding : 1em;
+border : #CCC solid 1px;
+border-radius : 1em;
+background : url("images/Team/fond.logo.png") center no-repeat;
+}
+form div {
+text-align : center;
+margin-top : 5px;
+}
+label {
+display : inline-block;
+width : 100%;
+text-align : center;
+color : white;
+}
+input {
+height : 1.5em;
+}
+input, textarea {
+width : 300px;
+border : #999 solid 1px;
+border-radius : 0.5em;
+}
+input:focus, textarea:focus {
+border-color : #000;
+}
+textarea {
+vertical-align : top;
+height : 10em;
+}
+.button {
+text-align : center;
+}
+.submit-button {
+background : #0066A2;
+color : white;
+border-style : outset;
+border-color : #0066A2;
+height : 50px;
+width : 100px;
+border-radius : 1em;
+text-shadow : none;
+}
+footer {
+background-color : black;
+--text-color : rgb(200, 198, 198);
+height : 100%;
+position : fixed;
+left : 0;
+right : 0;
+}
+.button-logo-bottom {
+display : flex;
+flex-direction : column;
+background-color : black;
+padding-top : 7%;
+align-items : center;
+}
+.logo_picture-desktop {
+display : none;
+}
+.logo_picture {
+height : 16vh;
+}
+.footer-team-404 {
+display : block;
+text-align : center;
+font-size : 0.7em;
+align-items : center;
+padding-top : 5%;
+color : white;
+}
+@media screen and (min-width: 768px) {
+body {
+background-image : url("images/Team/fond.logo.png");
+background-repeat : no-repeat;
+background-size : cover;
+}
+header {
+height : 6vh;
+}
+.gameName > h1 {
+font-size : 1.7em;
+text-align : right;
+padding-right : 5%;
+}
+header > ul {
+flex-direction : row;
+font-size : 0.8em;
+width : 70vw;
+}
+header > ul > li {
+font-size : 1.2em;
+}
+.mainContent {
+height : 23em;
+}
+.button-logo-bottom {
+padding-top : 2%;
+}
+form {
+margin : 10px auto;
+width : 80%;
+height : 800px;
+display : flex;
+padding : 1em;
+border : #CCC solid 1px;
+border-radius : 1em;
+flex-direction : row;
+flex-wrap : wrap;
+align-content : space-around;
+justify-content : center;
+align-items : center;
+background : none;
+}
+input {
+height : 1.5em;
+}
+input, textarea {
+border : #999 solid 1px;
+border-radius : 0.5em;
+}
+input {
+width : 220px;
+}
+textarea {
+vertical-align : top;
+height : 20em;
+width : 600px;
+}
+.submit-button {
+font-size : 1.5em;
+background : #0066A2;
+color : white;
+border-style : outset;
+height : 100px;
+width : 200px;
+border-radius : 1em;
+text-shadow : none;
+}
+.game_name {
+font-size : 2.5em;
+padding-top : 0;
+}
+.logo_picture {
+width : auto;
+height : 90px;
+}
+.footer-team-404 {
+padding-top : 0;
+height : 5vh;
+}
+.footer-team-404 > h3 {
+font-size : 2em;
+padding-bottom : 4%;
+}
+.rules {
+width : 32em;
+height : 31em;
+margin-top : 2.4em;
+margin-left : -24em;
+padding : 1em;
+}
+.btn {
+font-size : 1.5em;
+}
+}
+@media screen and (min-width: 1024px) {
+body {
+height : initial;
+background-image : url("images/background/37182(1).jpg");
+background-repeat : no-repeat;
+background-size : cover;
+}
+header {
+height : 8vh;
+}
+header > ul > li {
+font-size : 1.5em;
+}
+.gameName > h1 {
+font-size : 2em;
+text-align : center;
+}
+.btn {
+font-size : 1em;
+}
+.rules {
+width : 36.5em;
+height : 34em;
+margin-top : 6em;
+margin-left : -35.6em;
+padding : 1.85em;
+}
+.rules > h2 {
+font-size : xx-large;
+}
+.rules > p {
+font-size : 1.4em;
+margin-bottom : 1.9rem;
+margin-top : 0;
+}
+.mainContent {
+height : 32em;
+}
+.button-logo-bottom {
+justify-content : space-around;
+padding-top : 0;
+}
+.game_name-desktop {
+display : initial;
+font-size : 2em;
+}
+.logo_picture-desktop {
+display : initial;
+height : 16vh;
+}
+.logo_picture {
+height : 16vh;
+width : initial;
+}
+.game_name {
+display : none;
+}
 
-  .btn {
-    font-size: 1.5em;
-  }
-}   
-  
-  @media screen and (min-width: 1024px) {
-
-  body {
-    height: initial;
-    background-image: url("images/background/37182(1).jpg");
-    background-repeat: no-repeat;
-    background-size: cover;  
-  }
-
-  header {
-    height: 8vh;
-  }
-
-  header > ul > li {
-    font-size: 1.5em;
-  }
-
-  .gameName > h1 {
-    font-size: 2em;
-    text-align: center;
-    }
-
-
-  .btn {
-    font-size: 1em;
-  }
-
-  .rules {
-    width: 36.5em;
-    height: 34em;
-    margin-top: 6em;
-    margin-left: -35.6em;
-    padding: 1.85em;
-    
-    }
-
-  .rules>h2 {
-      font-size: xx-large;
-  }
-
-  .rules>p {
-      font-size: 1.4em;
-      margin-bottom: 1.9rem;
-      margin-top: 0;
-    }
-
-  .mainContent {
-    height: 32em;
-  }
-  
-  .button-logo-bottom {
-    justify-content: space-around;
-    padding-top: 0;
-  }
-
-
-  .game_name-desktop {
-    display: initial;
-    font-size: 2em;
-  }
-
-  .logo_picture-desktop {
-    display: initial;
-    height: 16vh;
-  }
-
-  .logo_picture {
-    height: 16vh;
-    width: initial;
-  } 
-  .game_name{
-    display: none;
-  }
-
-  .directional-cross-right {
-    display: none;
-  }
-  .directional-cross-left {
-    display: none;
-  }
-
-  /******** Accès aux réseaux sociaux *******/
-
-  .footer_social_team404 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 0;
-  }
-
-  .footer_social_medias {
-    display: flex;
-    justify-content: space-around;
-    width: 40%;    
-    align-items: center;
-    padding-top: 0;
-  }
-
-  .footer_social_medias > ul {
-  width: 100;
-  justify-content: space-around;
-  padding-top: 0
-  }
-
-  .footer_social_medias > ul > li {
-  width: initial;
-  width: 33%;
-  margin-right: 15%;
-  font-size: 1em;
-  }  
-
-
-
-  .footer-team-404 {
-    display: flex;
-    justify-content: center;
-    width: 40%;
-    height: initial;
-    padding-top: 0;
-    margin-top: 0;  
-  }
-
-  .footer-team-404 > h3 {
-    width: 100%;
-    font-size: 2.5em;
-    text-align: center;
-  } 
-
-} 
+.footer_social_team404 {
+display : flex;
+flex-direction : row;
+justify-content : space-around;
+padding : 0;
+}
+.footer-team-404 {
+display : flex;
+justify-content : center;
+width : 40%;
+height : initial;
+padding-top : 0;
+margin-top : 0;
+}
+.footer-team-404 > h3 {
+width : 100%;
+font-size : 2.5em;
+text-align : center;
+}
+}
