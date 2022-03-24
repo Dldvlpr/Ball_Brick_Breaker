@@ -2,7 +2,6 @@
 
 
 body {
-<<<<<<< HEAD
   font-size: 16px;
   box-sizing: border-box;
   padding: 0;
@@ -11,23 +10,11 @@ body {
   font-family: "IM Fell English", serif;
   background-repeat: no-repeat;
   background-size: cover;
-=======
-font-size : 16px;
-box-sizing : border-box;
-padding : 0;
-margin : 0;
-font-family : "IM Fell English", serif;
-background-color : rgb(63, 39, 18, 0.93);
->>>>>>> f7a9adab9122ecc646e4bd2a5e5e1d3b4f7f6532
 }
 header {
 position : sticky;
 height : 3rem;
-<<<<<<< HEAD
 background-color : rgb(63, 39, 18);
-=======
-background-color : rgb(63, 39, 18, 0.93);
->>>>>>> f7a9adab9122ecc646e4bd2a5e5e1d3b4f7f6532
 display : flex;
 }
 .logo-header {
@@ -65,62 +52,9 @@ align-items : center;
 header > ul > li > a {
 text-decoration : none;
 color : white;
-<<<<<<< HEAD
-=======
-}
-.btn {
-border-radius : 16px;
-font-family : "IM Fell English", serif;
-cursor : help;
-font-size : 9.6px;
-padding : 0;
-outline : none;
-background-color : rgb(63, 39, 18, 0.93);
-border : none;
-color : #ffffff;
-transition : 0.2s;
-}
-.rules {
-background-image : url("images/regle/Team_404_fond_regles.png");
-border-radius : 16px;
-position : absolute;
-display : flex;
-justify-content : center;
-flex-flow : column;
-color : #ffffff;
-width : 22em;
-height : 38em;
-margin-top : 5em;
-margin-left : -14em;
-padding : 2em;
-line-height : 1.7;
-visibility : hidden;
-opacity : 0;
-transition-duration : 1.4s;
-}
-.rules > h2 {
-text-align : center;
-font-size : x-large;
-}
-.rules > p {
-font-size : 1.2em;
-margin-bottom : 0.5rem;
-margin-top : 0;
-}
-.rules.show {
-visibility : visible;
-opacity : 1;
-}
-.btn:hover {
-background-color : rgb(44, 44, 44);
-}
-.btn:focus {
-outline : none;
->>>>>>> f7a9adab9122ecc646e4bd2a5e5e1d3b4f7f6532
 }
 
 form {
-<<<<<<< HEAD
 margin : 10% auto;
 width : 320px;
 height: 425px;
@@ -133,47 +67,37 @@ background-size: cover;
 form div {
 text-align : center;
 margin-top : 5px;
-=======
-    margin: 10px auto;
-    width: 320px;
-    padding: 1em;
-    border: 1px solid #CCC;
-    border-radius: 1em;
-    background: url("images/Team/fond.logo.png") no-repeat;
-    background-size: cover;
-  }
-  
-  form div {
-      text-align: center;
-    margin-top: 5px;
-  }
-  
-  label {
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-    color: white;
-  }
+}form div {
+  text-align: center;
+margin-top: 5px;
+}
 
-  input{
-      height: 1.5em;
-  }
-  
-  input, textarea {
+label {
+display: inline-block;
+width: 100%;
+text-align: center;
+color: white;
+}
 
-    width: 300px;  
-    border: 1px solid #999;
-  }
-  
-  input:focus, textarea:focus {
-    border-color: #000;
-  }
-  
-  textarea {
-    vertical-align: top;
-      height: 10em;
-  }
-  
+input{
+  height: 1.5em;
+}
+
+input, textarea {
+
+width: 300px;  
+border: 1px solid #999;
+}
+
+input:focus, textarea:focus {
+border-color: #000;
+}
+
+textarea {
+vertical-align: top;
+  height: 10em;
+}
+
 .button {
 text-align : center;
 }
@@ -188,7 +112,7 @@ border-radius : 1em;
 text-shadow : none;
 }
 footer {
-background-color : rgb(63, 39, 18, 0.93);
+background-color : rgb(63, 39, 18);
 --text-color : rgb(200, 198, 198);
 height : 100%;
 position : fixed;
@@ -208,6 +132,7 @@ display : none;
 .logo_picture {
 height : 16vh;
 }
+
 .footer-team-404 {
 display : block;
 text-align : center;
@@ -216,6 +141,7 @@ align-items : center;
 padding-top : 5%;
 color : white;
 }
+
 @media screen and (min-width: 768px) {
 body {
 background-image : url("images/Team/fond.logo.png");
@@ -234,97 +160,6 @@ header > ul {
 flex-direction : row;
 font-size : 0.8em;
 width : 70vw;
-}
-header > ul > li {
-font-size : 1.2em;
-}
-.mainContent {
-height : 23em;
->>>>>>> f7a9adab9122ecc646e4bd2a5e5e1d3b4f7f6532
-}
-label {
-display : inline-block;
-width : 100%;
-text-align : left;
-color : white;
-margin-left: 8px;
-}
-input {
-height : 1.5em;
-}
-input, textarea {
-width : 300px;
-border : #999 solid 1px;
-border-radius : 0.5em;
-}
-input:focus, textarea:focus {
-border-color : #000;
-}
-textarea {
-vertical-align : top;
-height : 10em;
-}
-
-.submit {
-  padding-top: 6%;
-}
-.submit-button {
-background : rgb(32, 38, 71);
-color : white;
-height : 35px;
-width : 50%;
-border-radius : 1.3em;
-text-shadow : none;
-}
-
-footer {
-background-color : rgb(63, 39, 18);
---text-color : rgb(200, 198, 198);
-height : 100%;
-position: relative;
-left: 0;
-right: 0;
-bottom: 0;
-}
-.button-logo-bottom {
-display : flex;
-flex-direction : row;
-justify-content: space-between;
-padding-top : 7%;
-align-items : center;
-}
-.logo_picture-desktop {
-  height: 12vh;
-}
-.logo_picture {
-height : 12vh;
-}
-.footer-team-404 {
-display : block;
-text-align : center;
-font-size : 1.3em;
-align-items : center;
-padding-top : 0;
-color : white;
-}
-@media screen and (min-width: 768px) {
-body {
-background-image : url("images/Team/fond.logo.png");
-background-repeat : no-repeat;
-background-size : cover;
-}
-header {
-height : 6vh;
-}
-.gameName > h1 {
-font-size : 1.7em;
-text-align : left;
-padding-right : 5%;
-}
-header > ul {
-flex-direction : row;
-font-size : 0.8em;
-width : 40vw;
 }
 header > ul > li {
 font-size : 1.2em;
@@ -386,23 +221,12 @@ height : 90px;
 .footer-team-404 {
 padding-top : 0;
 height : 5vh;
-<<<<<<< HEAD
-=======
 }
 .footer-team-404 > h3 {
 font-size : 2em;
 padding-bottom : 4%;
 }
-.rules {
-width : 32em;
-height : 31em;
-margin-top : 2.4em;
-margin-left : -24em;
-padding : 1em;
-}
-.btn {
-font-size : 1.5em;
-}
+
 }
 @media screen and (min-width: 1024px) {
 body {
@@ -419,24 +243,7 @@ font-size : 1.5em;
 font-size : 2em;
 text-align : center;
 }
-.btn {
-font-size : 1em;
-}
-.rules {
-width : 36.5em;
-height : 34em;
-margin-top : 6em;
-margin-left : -35.6em;
-padding : 1.85em;
-}
-.rules > h2 {
-font-size : xx-large;
-}
-.rules > p {
-font-size : 1.4em;
-margin-bottom : 1.9rem;
-margin-top : 0;
-}
+
 form {
 margin : 0 auto;
 width : 800px;
@@ -461,92 +268,12 @@ border-color : #000;
 textarea {
 vertical-align : top;
 height : 13em;
->>>>>>> f7a9adab9122ecc646e4bd2a5e5e1d3b4f7f6532
 }
 .footer-team-404 > h3 {
 font-size : 2em;
 padding-bottom : 4%;
 }
-<<<<<<< HEAD
 
-}
-@media screen and (min-width: 1024px) {
-body {
-height : initial;
-background-image : url("images/background/37182(1).jpg");
-background-repeat : no-repeat;
-background-size : cover;
-}
-header {
-height : 8vh;
-}
-header > ul > li {
-font-size : 1.5em;
-}
-.gameName > h1 {
-font-size : 2em;
-text-align : center;
-}
-.btn {
-font-size : 1em;
-}
-.rules {
-width : 36.5em;
-height : 34em;
-margin-top : 6em;
-margin-left : -35.6em;
-padding : 1.85em;
-}
-.rules > h2 {
-font-size : xx-large;
-}
-.rules > p {
-font-size : 1.4em;
-margin-bottom : 1.9rem;
-margin-top : 0;
-}
-.mainContent {
-height : 32em;
-}
-.button-logo-bottom {
-justify-content : space-around;
-padding-top : 0;
-}
-.game_name-desktop {
-display : initial;
-font-size : 2em;
-}
-.logo_picture-desktop {
-display : initial;
-height : 16vh;
-}
-.logo_picture {
-height : 16vh;
-width : initial;
-}
-.game_name {
-display : none;
-=======
-.footer_social_team404 {
-display : flex;
-flex-direction : row;
-justify-content : space-around;
-padding : 0;
-}
-.footer-team-404 {
-display : flex;
-justify-content : center;
-width : 40%;
-height : initial;
-padding-top : 0;
-margin-top : 0;
-}
-.footer-team-404 > h3 {
-width : 100%;
-font-size : 2.5em;
-text-align : center;
->>>>>>> f7a9adab9122ecc646e4bd2a5e5e1d3b4f7f6532
-}
 
 .footer_social_team404 {
 display : flex;
