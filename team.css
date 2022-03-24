@@ -1,19 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap");
 
-/* Le travail a d'abord été fait en pixels puis un convertisseurs en em a été utilisé pour garder la logique globale*/
+
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: all 1s linear; /*comprendre pourquoi la transition ne s'active pas à l'ouverture de la page, utiliser js*/
+  transition: all 1s linear; 
 }
 
 body {
-  background-image: url(images/background/fondcarte.jpg);
+  background-image: url(images/background/ship2.jpg);
   font-family: "IM Fell English", serif;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-repeat: no-repeat
+  background-size: ;
 }
 
 header {
@@ -236,6 +236,7 @@ footer {
     font-size: 1em;
   }
 }
+
 @media screen and (min-width: 1024px) {
   .logoPrincipal {
     margin-top: 0;

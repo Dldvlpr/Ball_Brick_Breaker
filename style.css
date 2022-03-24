@@ -11,7 +11,8 @@ body {
 header {
   position: sticky;
   height: 3rem;
-  background-color: black;
+  background-color: rgba(63, 39, 18, 0.93);
+  /*rgba(66, 43, 7, 0.931);*/
   display: flex;
 }
 
@@ -80,7 +81,7 @@ header > ul > li > a {
     font-size: 9.6px;
     padding: 0px;
     outline: none;
-    background-color: #000000;
+    background-color: rgba(63, 39, 18, 0.93);
     border: none; /*intégration*/
     color: #ffffff;
     transition: .2s ;
@@ -155,7 +156,7 @@ header > ul > li > a {
 /********** Logo, nom du jeu et bouton **********/
 footer {
   z-index: -1;
-  background-color: black;
+  background-color:rgb(63, 39, 18);
   --text-color: rgb(200, 198, 198);
   color: var(--text-color); 
   height: 100%;
@@ -169,7 +170,7 @@ footer {
   justify-content: center;
   flex-direction: row;
   align-items: center;
-  background-color: black;
+  background-color:(63, 39, 18);
   padding-top: 7%;
 }
 
@@ -197,12 +198,12 @@ footer {
   width: 90px;
   height: 60px;
   border: none;
-  background-color: black;
+  background-color: rgb(63, 39, 18);
   padding: 0;
 }
 #cross-left {
   text-align: center;
-  background-color: black;
+  background-color: rgb(63, 39, 18);
   width: 90px;
   height: 60px;
   padding: 0;
@@ -220,7 +221,7 @@ footer {
   height: 5%;
   margin: 0;
   padding-top: 5%;
-  background-color: black; 
+  background-color: rgba(63, 39, 18, 0.93); 
 }
 .game_name > h2 {
   margin: 0;
