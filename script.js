@@ -40,7 +40,7 @@ GAME_OVER.src = "sounds/game_over.mp3";
 let x = canvas.width/2;
 let y = canvas.height -25;
 let dx = 2;
-let dy = -3;
+let dy = -2;
 let start = false;
 const ballRadius = 9;
 const paddleHeight = 10;
@@ -288,14 +288,9 @@ function startGame()
         paddleX = (canvas.width-paddleWidth)/2;
         dx = 2;
         dy = -3;
-        if (lives >= 1){
         LIFE_LOST.play();
         startGame();
-        }
-        else {
-            gameOver();
-        }
-        /* alert("vous avez perdu une vie"); */        
+        alert("vous avez perdu une vie");        
     }
     
   }
@@ -331,7 +326,7 @@ const youLose = document.getElementById('game-over');
 /* ne pas toucher, faire également le message de victoire*/ 
 function gameOver()
 {
-    if (lives === 0 )
+    if (lives === 0)
     {   
         GAME_OVER.play()
         youLose.style.visibility = 'visible';
@@ -361,5 +356,5 @@ function draw()
 }
 
 /* appel fonction draw intervalle regulier */
- const interval = setInterval(draw, 16);
+ const interval = setInterval(draw, 14);
  

@@ -1,19 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap");
 
-/* Le travail a d'abord été fait en pixels puis un convertisseurs en em a été utilisé pour garder la logique globale*/
+
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: all 1s linear; /*comprendre pourquoi la transition ne s'active pas à l'ouverture de la page, utiliser js*/
+  transition: all 1s linear; 
 }
 
 body {
-  background-image: url(images/background/fondcarte.jpg);
+  background-image: url(images/background/ship2.jpg);
   font-family: "IM Fell English", serif;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-repeat: no-repeat
+  background-size: ;
 }
 
 header {
@@ -29,7 +29,7 @@ header {
   width: auto;
 }
 
-.logoPrincipal{
+.logoPrincipal {
   width: 30%;
   text-align: center;
   margin-top: 0.2em;
@@ -47,7 +47,7 @@ header > ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 40%;
+  width: 60%;
   font-size: 1em;
   margin-right: 3%;
 }
@@ -64,7 +64,6 @@ header > ul > li > a {
   height: 100%;
   width: 100%;
 }
-
 
 .backgroundImgDev {
   border-radius: 1em;
@@ -128,18 +127,15 @@ header > ul > li > a {
 }
 
 .fab:hover {
-  transform: scale(1.4); 
-  opacity:1;
+  transform: scale(1.4);
+  opacity: 1;
 }
-
 
 footer {
   background-color: black;
   --text-color: rgb(200, 198, 198);
-  color: var(--text-color); 
+  color: var(--text-color);
   height: 100%;
-  
-
 }
 
 .logo-bottom {
@@ -151,13 +147,11 @@ footer {
   background-color: black;
 }
 
-.team_404{
+.team_404 {
   text-align: center;
   font-size: 1em;
   background-color: black;
   width: 40%;
-
-  
 }
 
 .team_404 > h2 {
@@ -165,16 +159,16 @@ footer {
   margin: 0;
   padding-top: 0;
   color: white;
-  text-shadow: 4px 4px 15px,-4px -4px 15px white;
+  text-shadow: 4px 4px 15px, -4px -4px 15px white;
 }
 
-.logo_picture-desktop{
+.logo_picture-desktop {
   height: 12vh;
-} 
+}
 
 .logo_picture {
   height: 12vh;
-} 
+}
 
 .game_name {
   text-align: center;
@@ -184,8 +178,6 @@ footer {
   padding-top: 0;
   background-color: black;
   width: 50%;
-
-  
 }
 .game_name > h2 {
   text-align: left;
@@ -206,22 +198,22 @@ footer {
   justify-content: space-between;
   text-align: center;
   list-style-type: none;
-  
 }
 .footer_social_medias > ul > li {
   width: 20%;
 }
 .fa-discord,
-.fa-telegram, 
+.fa-telegram,
 .fa-twitter {
   color: white;
   font-size: 1em;
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
   header {
     height: 5rem;
   }
+
   .logoPrincipal {
     margin-top: 0.5em;
   }
@@ -239,18 +231,22 @@ footer {
     font-size: 1.8em;
   }
   .fa-discord,
-  .fa-telegram, 
+  .fa-telegram,
   .fa-twitter {
     font-size: 1em;
   }
-  
 }
-@media screen and (min-width: 1024px) {
 
+@media screen and (min-width: 1024px) {
   .logoPrincipal {
     margin-top: 0;
   }
-  
+
+  header > ul {
+    font-size: 19.2px;
+    width: 35%;
+  }
+
   #ourTeam {
     font-size: 4em;
     letter-spacing: 10px;
@@ -261,10 +257,9 @@ footer {
   }
   .footer_social_medias {
     margin-top: 7%;
-
   }
   .fa-discord,
-  .fa-telegram, 
+  .fa-telegram,
   .fa-twitter {
     font-size: 1em;
   }
@@ -276,5 +271,3 @@ footer {
     height: 17vh;
   }
 }
-
-
