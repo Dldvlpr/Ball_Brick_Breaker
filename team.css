@@ -12,12 +12,8 @@
 body {
   background-image: url("images/background/Slice 1(2).png");
   font-family: "IM Fell English", serif;
-<<<<<<< HEAD
   background-repeat: no-repeat;
   background-size: cover;
-=======
-  background-repeat: no-repeat
->>>>>>> 2321b448374b37d043d8e840c3e57465df7fb322
 }
 
 header {
@@ -43,7 +39,7 @@ header {
   font-size: 2em;
   margin-top: 0.8em;
   text-align: center;
-  color: rgb(46, 44, 44);
+  color: rgb(61, 57, 57);
 }
 header > ul {
   list-style-type: none;
