@@ -11,8 +11,8 @@ body {
 header {
   position: sticky;
   height: 3rem;
-  background-color: rgba(63, 39, 18, 0.93);
-  /*rgba(66, 43, 7, 0.931);*/
+  background-color: rgb(63, 39, 18);
+  
   display: flex;
 }
 
@@ -73,6 +73,21 @@ header > ul > li > a {
   height: 150px;
 }
 
+#victory {
+
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%, -50%)
+}
+
+#you-win{
+  width: 150px; 
+  height: 150px;
+}
+
 /* Game's rules sections */
 .btn {
     border-radius:16px;
@@ -81,7 +96,7 @@ header > ul > li > a {
     font-size: 9.6px;
     padding: 0px;
     outline: none;
-    background-color: rgba(63, 39, 18, 0.93);
+    background-color: rgba(63, 39, 18, 9.3);
     border: none; /*intégration*/
     color: #ffffff;
     transition: .2s ;
@@ -90,7 +105,8 @@ header > ul > li > a {
   .close-btn {
     font-size: 1em;
     width: 80%;
-    margin-left: 2.6em;    
+    margin-left: 2.6em; 
+    background-color: black;   
   } 
   
   .rules {
@@ -156,7 +172,7 @@ header > ul > li > a {
 /********** Logo, nom du jeu et bouton **********/
 footer {
   z-index: -1;
-  background-color:rgb(63, 39, 18);
+  background-color: rgb(63, 39, 18);
   --text-color: rgb(200, 198, 198);
   color: var(--text-color); 
   height: 100%;
@@ -170,7 +186,7 @@ footer {
   justify-content: center;
   flex-direction: row;
   align-items: center;
-  background-color:(63, 39, 18);
+  background-color: rgb(63, 39, 18);
   padding-top: 7%;
 }
 
@@ -221,7 +237,7 @@ footer {
   height: 5%;
   margin: 0;
   padding-top: 5%;
-  background-color: rgba(63, 39, 18, 0.93); 
+  background-color: rgb(63, 39, 18); 
 }
 .game_name > h2 {
   margin: 0;
@@ -249,7 +265,7 @@ footer {
 .fa-discord,
 .fa-telegram, 
 .fa-twitter {
-  color: white; /*couleur d'origine du logo a revoir */
+  color: white;
   width: 33%;
   font-size: 1.2em;
 }
@@ -320,8 +336,6 @@ footer {
   #right_hand {
     content: url(images/logo/Maskgrouprighthandtablette.png);
   }
-  
-  
 
   .game_name {
     font-size: 2.5em;
@@ -380,6 +394,19 @@ footer {
 #you-lose{
   width: 280px;
   height: 280px;
+}
+
+#victory {
+
+  position: fixed;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%, -50%)
+}
+
+#you-win{
+  width: 230px; 
+  height: 220px;
 }
 
 }
@@ -539,4 +566,15 @@ footer {
     height: 350px;
   }
 
+  #victory {
+
+    left: 50%;
+    top: 38%;
+    transform: translate(-50%, -50%)
+  }
+  
+  #you-win{
+    width: 240px; 
+    height: 250px;
+  }
 } 

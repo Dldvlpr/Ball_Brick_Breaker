@@ -2,6 +2,8 @@ const canvas = document.getElementById("screenGame");
 const context = canvas.getContext("2d");
 const rightButton = document.getElementById("cross-right")
 const leftButton = document.getElementById("cross-left");
+const youLose = document.getElementById('game-over');
+const youWin = document.getElementById('victory');
 
 /*Images à placer dans le canvas pour le score et les vies et briques*/
 const LIFE_IMG = new Image();
@@ -36,7 +38,7 @@ const GAME_OVER = new Audio();
 GAME_OVER.src = "sounds/game_over.mp3";
 
 
-/*afection des variable */
+/*affection des variables */
 let x = canvas.width/2;
 let y = canvas.height -25;
 let dx = 2;
@@ -44,7 +46,7 @@ let dy = -2;
 let start = false;
 const ballRadius = 9;
 const paddleHeight = 10;
-const paddleWidth = 85;
+const paddleWidth = 495;
 let paddleX = (canvas.width-paddleWidth)/2;
 let rightPressed = false;
 let leftPressed = false;
@@ -58,18 +60,19 @@ const brickPadding = 3;
 const brickOffsetTop = 50;
 const brickOffsetLeft = 16;
 
-/*evenement d'ecoute */
+/*événements d'écoute*/
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
 leftButton.addEventListener("mousedown", keyDownHandler,false);
 rightButton.addEventListener("mousedown", HandlerMouseDown, false);
 leftButton.addEventListener("mouseup", keyUpHandler, false);
 rightButton.addEventListener("mouseup", HandlerMouseUp, false);
-/* document.addEventListener("mousemove", mouseMoveHandler, false); */
- /* pop up regle */
+
+ /* pop-up règles du jeu*/
  const rules = document.getElementById('rules');
  const rulesBtn = document.getElementById('rules-btn');
  const closeBtn = document.getElementById('close-btn');
+
 
  rulesBtn.addEventListener("click", function() 
  {
@@ -81,7 +84,7 @@ rightButton.addEventListener("mouseup", HandlerMouseUp, false);
     rules.classList.remove('show');
 });
 
-/*detection appui touche/bouton */
+/*détection appui touches/boutons */
 function keyDownHandler(events) 
 {
     if(events.keyCode === 32)
@@ -134,7 +137,7 @@ function HandlerMouseUp(events)
         rightPressed = false;
     }
 }
-/*deplacement paddle + colision paddle*/
+/*déplacement paddle + collision paddle*/
 function paddleMove()
 {
     if(rightPressed)
@@ -154,22 +157,10 @@ function paddleMove()
         }
     }
 }
-// fonction de detectin de la position de la souris pour deplacer la raquette avec la souris
-/* function mouseMoveHandler(events)
-{
-    let relativeX = events.clientX - canvas.offsetLeft;
-    if(relativeX > 0 && relativeX < canvas.width)
-    {
-        paddleX = relativeX - paddleWidth/2;
-    } if (paddleX + paddleWidth > canvas.width)
-    {
-        paddleX = canvas.width - paddleWidth;
-    } if (paddleX < 0){
-        paddleX = 0;
-    } 
-} */
 
-/* tableau briques */
+
+/*  tableau briques */
+
 const bricks = [];
 for(let column=0; column<brickColumnCount; column++) 
 {
@@ -179,7 +170,8 @@ for(let column=0; column<brickColumnCount; column++)
         bricks[column][row] = { x: 0, y: 0, statusbar: 1 };
     }
 }
-/* detection colision briques */
+/********* détéction colision briques ***********/
+
 function collisionDetectionBricks() 
 {
     for(let column=0; column<brickColumnCount; column++)
@@ -197,10 +189,12 @@ function collisionDetectionBricks()
                     score += 5;
                     if(score === brickRowCount*brickColumnCount*5)
                     {
-                        WIN.play();
-                        alert("C'est gagné, Bravo!");
-                        document.location.reload();
+                        WIN.play()
+                        youWin.style.visibility = 'visible';
+                        youWin.style.opacity = '1';
+                        youWin.style.transitionDuration = '2s';
                         clearInterval(interval);
+                        window.setTimeout(function(){location.reload()}, 2600);
                     }
                 }
             }    
@@ -208,7 +202,7 @@ function collisionDetectionBricks()
     }
 }
 
-/*affichage img score */
+/****** affichage img score *********/
 function drawScore()
 {
     context.font = "24px Arial";
@@ -217,7 +211,7 @@ function drawScore()
     context.drawImage(SCORE_IMG,20, 13, 20, 20);
 }
 
-/* affichage img vie*/
+/********** affichage img vie**********/
 function drawLives()
 {
     context.font = "24px";
@@ -226,7 +220,7 @@ function drawLives()
     context.drawImage(LIFE_IMG, 465, 13, 20, 20);
 }
 
-/*creation paddle */
+/*création paddle */
 function drawPaddle()
 {
     context.drawImage(PADDLE_KNIFE,paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
@@ -234,7 +228,7 @@ function drawPaddle()
 }
 
 
-/*creation et repartition des briques*/
+/*création et répartition des briques*/
 function drawBricks()
 {
     for(let column=0; column<brickColumnCount; column++)
@@ -252,7 +246,7 @@ function drawBricks()
         }
     }
 }
-/*creation de la balle */
+/*création de la balle */
 function drawBall() 
 {
     context.beginPath();
@@ -261,7 +255,7 @@ function drawBall()
     context.fill();
     context.closePath();
 }
-/*lançé le jeu */
+/*lancer le jeu */
 function startGame()
 {
       if (start)
@@ -276,7 +270,7 @@ function startGame()
       }
 
 }
-/*perte de vie + pop up */
+/*perte de vie + pop-up */
   function lostLife()
   {
     if (y + dy > canvas.height-ballRadius)
@@ -294,7 +288,7 @@ function startGame()
     }
     
   }
-/*dtection colision mur et paddle */
+/*détection collision mur et paddle */
 function colisionDetectionWall()
 {
     x += dx;
@@ -320,10 +314,6 @@ function colisionDetectionWall()
 }
 
 
-const youLose = document.getElementById('game-over');
-/*const youWin = document.getElementByIde('you-win')*/
-
-/* ne pas toucher, faire également le message de victoire*/ 
 function gameOver()
 {
     if (lives === 0)
@@ -355,6 +345,6 @@ function draw()
     lostLife()
 }
 
-/* appel fonction draw intervalle regulier */
- const interval = setInterval(draw, 14);
+/* appel fonction draw intervalle régulier */
+ const interval = setInterval(draw, 1);
  
