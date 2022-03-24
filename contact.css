@@ -60,65 +60,6 @@ header > ul > li > a {
 
 /* Game's rules sections */
 
-.btn {
-    border-radius:16px;
-    font-family: "IM Fell English", serif;
-    cursor: help;
-    font-size: 9.6px;
-    padding: 0px;
-    outline: none;
-    background-color: #000000;
-    border: none; /*intégration*/
-    color: #ffffff;
-    transition: .2s ;
-    /*ease-out, ou ease-in à rajouter ??*/
-  }
-  
-  .rules {
-    background-image: url("images/regle/Team_404_fond_regles.png");
-    border-radius: 16px;
-    position: absolute; /*à revoir*/
-    display: flex;
-    justify-content: center;
-    flex-flow: column;
-    color: #ffffff;
-    width: 22em;
-    height: 38em;
-    margin-top: 5em;
-    margin-left: -14em;
-    padding: 2em;
-    line-height: 1.7;
-    visibility: hidden;
-    opacity: 0;
-    transition-duration: 1.4s;
-}
-  
-.rules>h2 {
-    text-align: center;
-    font-size: x-large;
-}
-
-.rules>p {
-    font-size: 1.2em;
-    margin-bottom: 0.5rem;
-    margin-top: 0;
-}
-
-
-.rules.show {
-  visibility: visible;
-  opacity: 1; 
-}
-
-
-.btn:hover {
-    background-color: rgb(44, 44, 44);
-}
-  
-.btn:focus{
-    outline: none; /* à modifier*/
-}
-
 form {
     margin: 10px auto;
     width: 320px;
@@ -126,6 +67,7 @@ form {
     border: 1px solid #CCC;
     border-radius: 1em;
     background: url("images/Team/fond.logo.png") no-repeat;
+    background-size: cover;
   }
   
   form div {
@@ -180,14 +122,12 @@ text-shadow:none;
   --text-color: rgb(200, 198, 198);
   color: var(--text-color); 
   height: 100%;
-  position: fixed;
-  left: 0;
-  right: 0;
 }
 
 .button-logo-bottom {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: flex-start;
   background-color: black;
   padding-top: 7%;
@@ -230,15 +170,16 @@ text-shadow:none;
   padding-top: 5%;
   color: white
 }
+.footer_social_medias{
+  display: none;
+}
 
    @media screen and (min-width: 768px) {
    
-  body{
-    background-image: url("images/background/37182(1).jpg");
+  body {
+    background-image: url("images/background/37182(1)(1).jpg");
     background-repeat: no-repeat;
-    background-size: cover;
-    
-    
+    background-size: cover; 
   }
 
   header {
@@ -261,9 +202,13 @@ text-shadow:none;
     font-size: 1.2em;
   }
   
-  .mainContent {
-    height: 23em;
-  }
+form {
+  width: 80%;
+  height: 810px ;
+  
+  border: 1px solid #CCC;
+  border-radius: 1em;
+}
 
   #screenGame {
     width: 50%;
@@ -273,26 +218,6 @@ text-shadow:none;
   .button-logo-bottom {
     padding-top: 2%;
   }
-
-  #cross-left {
-    width: 150px;
-    height: 120px; 
-  }
-
-  #cross-right {
-    width: 150px;
-    height: 120px;
-  }
-  
-  #left_hand {
-    content: url(images/logo/lefthandtablette.png);
-  }
-
-  #right_hand {
-    content: url(images/logo/Maskgrouprighthandtablette.png);
-  }
-  
-  
 
   .game_name {
     font-size: 2.5em;
@@ -304,16 +229,6 @@ text-shadow:none;
     width: 35vw;
   } 
 
-  .footer_social_medias {
-    display: flex;
-    font-size: 2em;
-    padding: 4vh;
-    margin: 0 4em;
-    padding-bottom: 1vh;
-  
-
-  }
-
   .footer-team-404 { 
     padding-top: 0;
     height: 5vh   ;
@@ -322,23 +237,8 @@ text-shadow:none;
   .footer-team-404 > h3 {
     font-size: 2em;
     padding-bottom: 4%;
-  }
-
-  
-
-.rules {
-  width: 32em;
-  height: 31em;
-  margin-top: 2.4em;
-  margin-left: -24em;
-  padding: 1em;
-  }
-
-  .btn {
-    font-size: 1.5em;
-  }
-}   
-  
+  } 
+} 
   @media screen and (min-width: 1024px) {
 
   body {
@@ -359,30 +259,6 @@ text-shadow:none;
   .gameName > h1 {
     font-size: 2em;
     text-align: center;
-    }
-
-
-  .btn {
-    font-size: 1em;
-  }
-
-  .rules {
-    width: 36.5em;
-    height: 34em;
-    margin-top: 6em;
-    margin-left: -35.6em;
-    padding: 1.85em;
-    
-    }
-
-  .rules>h2 {
-      font-size: xx-large;
-  }
-
-  .rules>p {
-      font-size: 1.4em;
-      margin-bottom: 1.9rem;
-      margin-top: 0;
     }
 
   .mainContent {
@@ -413,44 +289,14 @@ text-shadow:none;
     display: none;
   }
 
-  .directional-cross-right {
-    display: none;
-  }
-  .directional-cross-left {
-    display: none;
-  }
-
   /******** Accès aux réseaux sociaux *******/
-
+  
   .footer_social_team404 {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     padding: 0;
   }
-
-  .footer_social_medias {
-    display: flex;
-    justify-content: space-around;
-    width: 40%;    
-    align-items: center;
-    padding-top: 0;
-  }
-
-  .footer_social_medias > ul {
-  width: 100;
-  justify-content: space-around;
-  padding-top: 0
-  }
-
-  .footer_social_medias > ul > li {
-  width: initial;
-  width: 33%;
-  margin-right: 15%;
-  font-size: 1em;
-  }  
-
-
 
   .footer-team-404 {
     display: flex;
