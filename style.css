@@ -73,6 +73,21 @@ header > ul > li > a {
   height: 150px;
 }
 
+#victory {
+
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%, -50%)
+}
+
+#you-win{
+  width: 150px; 
+  height: 150px;
+}
+
 /* Game's rules sections */
 .btn {
     border-radius:16px;
@@ -381,6 +396,19 @@ footer {
   height: 280px;
 }
 
+#victory {
+
+  position: fixed;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%, -50%)
+}
+
+#you-win{
+  width: 230px; 
+  height: 220px;
+}
+
 }
   
   @media screen and (min-width: 1024px) {
@@ -538,4 +566,15 @@ footer {
     height: 350px;
   }
 
+  #victory {
+
+    left: 50%;
+    top: 38%;
+    transform: translate(-50%, -50%)
+  }
+  
+  #you-win{
+    width: 240px; 
+    height: 250px;
+  }
 } 
