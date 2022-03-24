@@ -11,13 +11,8 @@ body {
 header {
   position: sticky;
   height: 3rem;
-<<<<<<< HEAD
-  background-color: rgba(63, 39, 18, 0.93 );
+  background-color: rgb(63, 39, 18);
   
-=======
-  background-color: rgba(63, 39, 18, 0.93);
-  /*rgba(66, 43, 7, 0.931);*/
->>>>>>> c7775dc6db520dcc1edcdf59f842ceb59a446e91
   display: flex;
 }
 
@@ -86,11 +81,7 @@ header > ul > li > a {
     font-size: 9.6px;
     padding: 0px;
     outline: none;
-<<<<<<< HEAD
     background-color: rgba(63, 39, 18, 9.3);
-=======
-    background-color: rgba(63, 39, 18, 0.93);
->>>>>>> c7775dc6db520dcc1edcdf59f842ceb59a446e91
     border: none; /*intégration*/
     color: #ffffff;
     transition: .2s ;
@@ -99,7 +90,8 @@ header > ul > li > a {
   .close-btn {
     font-size: 1em;
     width: 80%;
-    margin-left: 2.6em;    
+    margin-left: 2.6em; 
+    background-color: black;   
   } 
   
   .rules {
@@ -165,11 +157,7 @@ header > ul > li > a {
 /********** Logo, nom du jeu et bouton **********/
 footer {
   z-index: -1;
-<<<<<<< HEAD
   background-color: rgb(63, 39, 18);
-=======
-  background-color:rgb(63, 39, 18);
->>>>>>> c7775dc6db520dcc1edcdf59f842ceb59a446e91
   --text-color: rgb(200, 198, 198);
   color: var(--text-color); 
   height: 100%;
@@ -183,11 +171,7 @@ footer {
   justify-content: center;
   flex-direction: row;
   align-items: center;
-<<<<<<< HEAD
   background-color: rgb(63, 39, 18);
-=======
-  background-color:(63, 39, 18);
->>>>>>> c7775dc6db520dcc1edcdf59f842ceb59a446e91
   padding-top: 7%;
 }
 
@@ -238,11 +222,7 @@ footer {
   height: 5%;
   margin: 0;
   padding-top: 5%;
-<<<<<<< HEAD
   background-color: rgb(63, 39, 18); 
-=======
-  background-color: rgba(63, 39, 18, 0.93); 
->>>>>>> c7775dc6db520dcc1edcdf59f842ceb59a446e91
 }
 .game_name > h2 {
   margin: 0;
@@ -270,7 +250,7 @@ footer {
 .fa-discord,
 .fa-telegram, 
 .fa-twitter {
-  color: white; /*couleur d'origine du logo a revoir */
+  color: white;
   width: 33%;
   font-size: 1.2em;
 }
@@ -341,8 +321,6 @@ footer {
   #right_hand {
     content: url(images/logo/Maskgrouprighthandtablette.png);
   }
-  
-  
 
   .game_name {
     font-size: 2.5em;
