@@ -194,7 +194,7 @@ function collisionDetectionBricks()
                         youWin.style.opacity = '1';
                         youWin.style.transitionDuration = '2s';
                         clearInterval(interval);
-                        window.setTimeout(function(){location.reload()}, 2600);
+                        window.setTimeout(function(){location.reload()}, 4000);
                     }
                 }
             }    
